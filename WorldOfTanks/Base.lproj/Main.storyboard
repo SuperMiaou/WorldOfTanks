@@ -47,7 +47,6 @@
                                 </state>
                                 <connections>
                                     <action selector="_btn_validSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekR-Of-glQ"/>
-                                    <segue destination="Mbi-0r-ska" kind="show" id="cmT-RQ-XAH"/>
                                 </connections>
                             </button>
                         </subviews>
