@@ -33,15 +33,18 @@ class ViewController: UIViewController {
     func searchPlayer () {
         let pseudo: String = ui_textPlayer.text!
         Alamofire.request("https://api.worldoftanks.eu/wot/account/list/?application_id=demo&search=\(pseudo)").responseJSON(completionHandler: { (response:DataResponse<Any>) in
-            switch response.result {
-            case .success:
                 var todoAsString = ""
                 debugPrint(response)
                 if let jsonArray = response.result.value as? [String:Any],
-                    let data = jsonArray["data"] as? [Any],
+                let data = jsonArray["data"] as? [Any],
                     let firstObject = data.first as? [String:Any] {
                     
-                    todoAsString += "Numéro de compte : \(firstObject["account_id"] as! Int) \n"
+                    if (firstObject.count != 0) {
+                        todoAsString += "Numéro de compte : \(firstObject["account_id"] as! Int) \n"
+
+                    } else {
+                        self.ui_labelAccount.text = "Joueur inconnue"
+                    }
                     //                for todoData:Any in jsonArray {
                     //                    if let todoItem:[String:Any] = todoData as? [String:Any] {
                     //                        print(todoItem)
@@ -49,11 +52,6 @@ class ViewController: UIViewController {
                     //                    }
                     //                }
                 }
-                self.ui_labelAccount.text = todoAsString
-            case .failure(let error):
-                print(error)
-                self.ui_labelAccount.text = "Joueur inconnue"
-            }
         })
     }
     
