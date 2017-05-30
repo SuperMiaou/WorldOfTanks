@@ -11,6 +11,7 @@
 		34920D507D84E3A72F58F26F /* Pods_WorldOfTanksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E299159E1F5E0C3746462A /* Pods_WorldOfTanksUITests.framework */; };
 		B30CB7441EDDACCD007735F6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7431EDDACCD007735F6 /* Player.swift */; };
 		B30CB7461EDDAD2F007735F6 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7451EDDAD2F007735F6 /* Vehicles.swift */; };
+		B30CB7481EDDB44D007735F6 /* TankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */; };
 		B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C31EDD5FC900F988BA /* AppDelegate.swift */; };
 		B32D74C61EDD5FCA00F988BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C51EDD5FCA00F988BA /* ViewController.swift */; };
 		B32D74C91EDD5FCA00F988BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74C71EDD5FCA00F988BA /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		9709A3855401DFBBB938BD99 /* Pods-WorldOfTanks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanks.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanks/Pods-WorldOfTanks.release.xcconfig"; sourceTree = "<group>"; };
 		B30CB7431EDDACCD007735F6 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B30CB7451EDDAD2F007735F6 /* Vehicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
+		B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TankTableViewController.swift; sourceTree = "<group>"; };
 		B32D74C01EDD5FC900F988BA /* WorldOfTanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfTanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D74C31EDD5FC900F988BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32D74C51EDD5FCA00F988BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				B32D74CF1EDD5FCA00F988BA /* Info.plist */,
 				B30CB7431EDDACCD007735F6 /* Player.swift */,
 				B30CB7451EDDAD2F007735F6 /* Vehicles.swift */,
+				B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */,
 			);
 			path = WorldOfTanks;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30CB7461EDDAD2F007735F6 /* Vehicles.swift in Sources */,
+				B30CB7481EDDB44D007735F6 /* TankTableViewController.swift in Sources */,
 				B32D74C61EDD5FCA00F988BA /* ViewController.swift in Sources */,
 				B30CB7441EDDACCD007735F6 /* Player.swift in Sources */,
 				B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */,
