@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		255C3287B10E109BA387FC98 /* Pods_WorldOfTanks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B00A78A0342A45CA083A13 /* Pods_WorldOfTanks.framework */; };
+		34920D507D84E3A72F58F26F /* Pods_WorldOfTanksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E299159E1F5E0C3746462A /* Pods_WorldOfTanksUITests.framework */; };
 		B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C31EDD5FC900F988BA /* AppDelegate.swift */; };
 		B32D74C61EDD5FCA00F988BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C51EDD5FCA00F988BA /* ViewController.swift */; };
 		B32D74C91EDD5FCA00F988BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74C71EDD5FCA00F988BA /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		B32D74CE1EDD5FCA00F988BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */; };
 		B32D74D91EDD5FCA00F988BA /* WorldOfTanksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74D81EDD5FCA00F988BA /* WorldOfTanksTests.swift */; };
 		B32D74E41EDD5FCA00F988BA /* WorldOfTanksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */; };
+		BF83BB669CC7717229DD9570 /* Pods_WorldOfTanksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1E778374C22B28030096FE /* Pods_WorldOfTanksTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CBEF040EA26F9CD3CC9D89A /* Pods-WorldOfTanksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanksUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanksUITests/Pods-WorldOfTanksUITests.release.xcconfig"; sourceTree = "<group>"; };
+		321E6BB478E979F09F15251C /* Pods-WorldOfTanksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanksTests/Pods-WorldOfTanksTests.release.xcconfig"; sourceTree = "<group>"; };
+		42E299159E1F5E0C3746462A /* Pods_WorldOfTanksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfTanksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1E778374C22B28030096FE /* Pods_WorldOfTanksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfTanksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DE3CDCC00092A3D5735076B /* Pods-WorldOfTanks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanks/Pods-WorldOfTanks.debug.xcconfig"; sourceTree = "<group>"; };
+		9709A3855401DFBBB938BD99 /* Pods-WorldOfTanks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanks.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanks/Pods-WorldOfTanks.release.xcconfig"; sourceTree = "<group>"; };
 		B32D74C01EDD5FC900F988BA /* WorldOfTanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfTanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D74C31EDD5FC900F988BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32D74C51EDD5FCA00F988BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		B32D74DF1EDD5FCA00F988BA /* WorldOfTanksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfTanksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfTanksUITests.swift; sourceTree = "<group>"; };
 		B32D74E51EDD5FCA00F988BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDC1B3555553BB0E06741F2D /* Pods-WorldOfTanksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanksUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanksUITests/Pods-WorldOfTanksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D811055633F3B3D4A7D90E58 /* Pods-WorldOfTanksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanksTests/Pods-WorldOfTanksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6B00A78A0342A45CA083A13 /* Pods_WorldOfTanks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfTanks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				255C3287B10E109BA387FC98 /* Pods_WorldOfTanks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF83BB669CC7717229DD9570 /* Pods_WorldOfTanksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34920D507D84E3A72F58F26F /* Pods_WorldOfTanksUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38FC1BF1B80E9EA02BC09229 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6B00A78A0342A45CA083A13 /* Pods_WorldOfTanks.framework */,
+				4E1E778374C22B28030096FE /* Pods_WorldOfTanksTests.framework */,
+				42E299159E1F5E0C3746462A /* Pods_WorldOfTanksUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E36287695E30F7F833C4895 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DE3CDCC00092A3D5735076B /* Pods-WorldOfTanks.debug.xcconfig */,
+				9709A3855401DFBBB938BD99 /* Pods-WorldOfTanks.release.xcconfig */,
+				D811055633F3B3D4A7D90E58 /* Pods-WorldOfTanksTests.debug.xcconfig */,
+				321E6BB478E979F09F15251C /* Pods-WorldOfTanksTests.release.xcconfig */,
+				BDC1B3555553BB0E06741F2D /* Pods-WorldOfTanksUITests.debug.xcconfig */,
+				1CBEF040EA26F9CD3CC9D89A /* Pods-WorldOfTanksUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B32D74B71EDD5FC900F988BA = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				B32D74D71EDD5FCA00F988BA /* WorldOfTanksTests */,
 				B32D74E21EDD5FCA00F988BA /* WorldOfTanksUITests */,
 				B32D74C11EDD5FC900F988BA /* Products */,
+				6E36287695E30F7F833C4895 /* Pods */,
+				38FC1BF1B80E9EA02BC09229 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B32D74E81EDD5FCA00F988BA /* Build configuration list for PBXNativeTarget "WorldOfTanks" */;
 			buildPhases = (
+				25EBC697F3554B729F43AB5D /* [CP] Check Pods Manifest.lock */,
 				B32D74BC1EDD5FC900F988BA /* Sources */,
 				B32D74BD1EDD5FC900F988BA /* Frameworks */,
 				B32D74BE1EDD5FC900F988BA /* Resources */,
+				C07340D4C520B5FF8F3E13CE /* [CP] Embed Pods Frameworks */,
+				176411D6D8954255EDE10334 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B32D74EB1EDD5FCA00F988BA /* Build configuration list for PBXNativeTarget "WorldOfTanksTests" */;
 			buildPhases = (
+				ECEF61B8A5C6E038BD36DCFF /* [CP] Check Pods Manifest.lock */,
 				B32D74D01EDD5FCA00F988BA /* Sources */,
 				B32D74D11EDD5FCA00F988BA /* Frameworks */,
 				B32D74D21EDD5FCA00F988BA /* Resources */,
+				8487FEC8D239EA2094BD557E /* [CP] Embed Pods Frameworks */,
+				8F4178A90F884F370AD3F080 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B32D74EE1EDD5FCA00F988BA /* Build configuration list for PBXNativeTarget "WorldOfTanksUITests" */;
 			buildPhases = (
+				6922A5DDF1FFED86649ED1A0 /* [CP] Check Pods Manifest.lock */,
 				B32D74DB1EDD5FCA00F988BA /* Sources */,
 				B32D74DC1EDD5FCA00F988BA /* Frameworks */,
 				B32D74DD1EDD5FCA00F988BA /* Resources */,
+				12EEC62C0788F1E7FDC76940 /* [CP] Embed Pods Frameworks */,
+				5ADFB2D48F6D3E083BCDE6FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12EEC62C0788F1E7FDC76940 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldOfTanksUITests/Pods-WorldOfTanksUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		176411D6D8954255EDE10334 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldOfTanks/Pods-WorldOfTanks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25EBC697F3554B729F43AB5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5ADFB2D48F6D3E083BCDE6FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldOfTanksUITests/Pods-WorldOfTanksUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6922A5DDF1FFED86649ED1A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8487FEC8D239EA2094BD557E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldOfTanksTests/Pods-WorldOfTanksTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4178A90F884F370AD3F080 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldOfTanksTests/Pods-WorldOfTanksTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C07340D4C520B5FF8F3E13CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldOfTanks/Pods-WorldOfTanks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECEF61B8A5C6E038BD36DCFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B32D74BC1EDD5FC900F988BA /* Sources */ = {
@@ -415,6 +602,7 @@
 		};
 		B32D74E91EDD5FCA00F988BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DE3CDCC00092A3D5735076B /* Pods-WorldOfTanks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6DZR4K469V;
@@ -428,6 +616,7 @@
 		};
 		B32D74EA1EDD5FCA00F988BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9709A3855401DFBBB938BD99 /* Pods-WorldOfTanks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6DZR4K469V;
@@ -441,6 +630,7 @@
 		};
 		B32D74EC1EDD5FCA00F988BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D811055633F3B3D4A7D90E58 /* Pods-WorldOfTanksTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +646,7 @@
 		};
 		B32D74ED1EDD5FCA00F988BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 321E6BB478E979F09F15251C /* Pods-WorldOfTanksTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +662,7 @@
 		};
 		B32D74EF1EDD5FCA00F988BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDC1B3555553BB0E06741F2D /* Pods-WorldOfTanksUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6DZR4K469V;
@@ -485,6 +677,7 @@
 		};
 		B32D74F01EDD5FCA00F988BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CBEF040EA26F9CD3CC9D89A /* Pods-WorldOfTanksUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6DZR4K469V;
