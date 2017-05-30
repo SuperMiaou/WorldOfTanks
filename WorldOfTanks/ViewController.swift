@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     // Test de partage
-    // a mon tour !d;gjhqkergnqkgq
+    // a mon tour !d;gjhqkergnqkgqgqrg
     
     func searchPlayer () {
         let pseudo: String = ui_textPlayer.text!
