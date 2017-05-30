@@ -39,12 +39,7 @@ class ViewController: UIViewController {
                 let data = jsonArray["data"] as? [Any],
                     let firstObject = data.first as? [String:Any] {
                     
-                    if (firstObject.count != 0) {
-                        todoAsString += "Numéro de compte : \(firstObject["account_id"] as! Int) \n"
-
-                    } else {
-                        self.ui_labelAccount.text = "Joueur inconnue"
-                    }
+                    todoAsString += "Numéro de compte : \(firstObject["account_id"] as! Int) \n"
                     //                for todoData:Any in jsonArray {
                     //                    if let todoItem:[String:Any] = todoData as? [String:Any] {
                     //                        print(todoItem)
@@ -52,9 +47,10 @@ class ViewController: UIViewController {
                     //                    }
                     //                }
                 }
+                self.ui_labelAccount.text = todoAsString
         })
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
