@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C31EDD5FC900F988BA /* AppDelegate.swift */; };
+		B32D74C61EDD5FCA00F988BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C51EDD5FCA00F988BA /* ViewController.swift */; };
+		B32D74C91EDD5FCA00F988BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74C71EDD5FCA00F988BA /* Main.storyboard */; };
+		B32D74CB1EDD5FCA00F988BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32D74CA1EDD5FCA00F988BA /* Assets.xcassets */; };
+		B32D74CE1EDD5FCA00F988BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */; };
+		B32D74D91EDD5FCA00F988BA /* WorldOfTanksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74D81EDD5FCA00F988BA /* WorldOfTanksTests.swift */; };
+		B32D74E41EDD5FCA00F988BA /* WorldOfTanksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B32D74D51EDD5FCA00F988BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B32D74B81EDD5FC900F988BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B32D74BF1EDD5FC900F988BA;
+			remoteInfo = WorldOfTanks;
+		};
+		B32D74E01EDD5FCA00F988BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B32D74B81EDD5FC900F988BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B32D74BF1EDD5FC900F988BA;
+			remoteInfo = WorldOfTanks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B32D74C01EDD5FC900F988BA /* WorldOfTanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfTanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32D74C31EDD5FC900F988BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B32D74C51EDD5FCA00F988BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B32D74C81EDD5FCA00F988BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B32D74CA1EDD5FCA00F988BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B32D74CD1EDD5FCA00F988BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B32D74CF1EDD5FCA00F988BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32D74D41EDD5FCA00F988BA /* WorldOfTanksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfTanksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32D74D81EDD5FCA00F988BA /* WorldOfTanksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfTanksTests.swift; sourceTree = "<group>"; };
+		B32D74DA1EDD5FCA00F988BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32D74DF1EDD5FCA00F988BA /* WorldOfTanksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfTanksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfTanksUITests.swift; sourceTree = "<group>"; };
+		B32D74E51EDD5FCA00F988BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B32D74BD1EDD5FC900F988BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32D74D11EDD5FCA00F988BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32D74DC1EDD5FCA00F988BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B32D74B71EDD5FC900F988BA = {
+			isa = PBXGroup;
+			children = (
+				B32D74C21EDD5FC900F988BA /* WorldOfTanks */,
+				B32D74D71EDD5FCA00F988BA /* WorldOfTanksTests */,
+				B32D74E21EDD5FCA00F988BA /* WorldOfTanksUITests */,
+				B32D74C11EDD5FC900F988BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B32D74C11EDD5FC900F988BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B32D74C01EDD5FC900F988BA /* WorldOfTanks.app */,
+				B32D74D41EDD5FCA00F988BA /* WorldOfTanksTests.xctest */,
+				B32D74DF1EDD5FCA00F988BA /* WorldOfTanksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B32D74C21EDD5FC900F988BA /* WorldOfTanks */ = {
+			isa = PBXGroup;
+			children = (
+				B32D74C31EDD5FC900F988BA /* AppDelegate.swift */,
+				B32D74C51EDD5FCA00F988BA /* ViewController.swift */,
+				B32D74C71EDD5FCA00F988BA /* Main.storyboard */,
+				B32D74CA1EDD5FCA00F988BA /* Assets.xcassets */,
+				B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */,
+				B32D74CF1EDD5FCA00F988BA /* Info.plist */,
+			);
+			path = WorldOfTanks;
+			sourceTree = "<group>";
+		};
+		B32D74D71EDD5FCA00F988BA /* WorldOfTanksTests */ = {
+			isa = PBXGroup;
+			children = (
+				B32D74D81EDD5FCA00F988BA /* WorldOfTanksTests.swift */,
+				B32D74DA1EDD5FCA00F988BA /* Info.plist */,
+			);
+			path = WorldOfTanksTests;
+			sourceTree = "<group>";
+		};
+		B32D74E21EDD5FCA00F988BA /* WorldOfTanksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */,
+				B32D74E51EDD5FCA00F988BA /* Info.plist */,
+			);
+			path = WorldOfTanksUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B32D74BF1EDD5FC900F988BA /* WorldOfTanks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32D74E81EDD5FCA00F988BA /* Build configuration list for PBXNativeTarget "WorldOfTanks" */;
+			buildPhases = (
+				B32D74BC1EDD5FC900F988BA /* Sources */,
+				B32D74BD1EDD5FC900F988BA /* Frameworks */,
+				B32D74BE1EDD5FC900F988BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorldOfTanks;
+			productName = WorldOfTanks;
+			productReference = B32D74C01EDD5FC900F988BA /* WorldOfTanks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B32D74D31EDD5FCA00F988BA /* WorldOfTanksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32D74EB1EDD5FCA00F988BA /* Build configuration list for PBXNativeTarget "WorldOfTanksTests" */;
+			buildPhases = (
+				B32D74D01EDD5FCA00F988BA /* Sources */,
+				B32D74D11EDD5FCA00F988BA /* Frameworks */,
+				B32D74D21EDD5FCA00F988BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B32D74D61EDD5FCA00F988BA /* PBXTargetDependency */,
+			);
+			name = WorldOfTanksTests;
+			productName = WorldOfTanksTests;
+			productReference = B32D74D41EDD5FCA00F988BA /* WorldOfTanksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B32D74DE1EDD5FCA00F988BA /* WorldOfTanksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32D74EE1EDD5FCA00F988BA /* Build configuration list for PBXNativeTarget "WorldOfTanksUITests" */;
+			buildPhases = (
+				B32D74DB1EDD5FCA00F988BA /* Sources */,
+				B32D74DC1EDD5FCA00F988BA /* Frameworks */,
+				B32D74DD1EDD5FCA00F988BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B32D74E11EDD5FCA00F988BA /* PBXTargetDependency */,
+			);
+			name = WorldOfTanksUITests;
+			productName = WorldOfTanksUITests;
+			productReference = B32D74DF1EDD5FCA00F988BA /* WorldOfTanksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B32D74B81EDD5FC900F988BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Matthieu;
+				TargetAttributes = {
+					B32D74BF1EDD5FC900F988BA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 6DZR4K469V;
+						ProvisioningStyle = Automatic;
+					};
+					B32D74D31EDD5FCA00F988BA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 6DZR4K469V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B32D74BF1EDD5FC900F988BA;
+					};
+					B32D74DE1EDD5FCA00F988BA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 6DZR4K469V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B32D74BF1EDD5FC900F988BA;
+					};
+				};
+			};
+			buildConfigurationList = B32D74BB1EDD5FC900F988BA /* Build configuration list for PBXProject "WorldOfTanks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B32D74B71EDD5FC900F988BA;
+			productRefGroup = B32D74C11EDD5FC900F988BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B32D74BF1EDD5FC900F988BA /* WorldOfTanks */,
+				B32D74D31EDD5FCA00F988BA /* WorldOfTanksTests */,
+				B32D74DE1EDD5FCA00F988BA /* WorldOfTanksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B32D74BE1EDD5FC900F988BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32D74CE1EDD5FCA00F988BA /* LaunchScreen.storyboard in Resources */,
+				B32D74CB1EDD5FCA00F988BA /* Assets.xcassets in Resources */,
+				B32D74C91EDD5FCA00F988BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32D74D21EDD5FCA00F988BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32D74DD1EDD5FCA00F988BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B32D74BC1EDD5FC900F988BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32D74C61EDD5FCA00F988BA /* ViewController.swift in Sources */,
+				B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32D74D01EDD5FCA00F988BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32D74D91EDD5FCA00F988BA /* WorldOfTanksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32D74DB1EDD5FCA00F988BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32D74E41EDD5FCA00F988BA /* WorldOfTanksUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B32D74D61EDD5FCA00F988BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B32D74BF1EDD5FC900F988BA /* WorldOfTanks */;
+			targetProxy = B32D74D51EDD5FCA00F988BA /* PBXContainerItemProxy */;
+		};
+		B32D74E11EDD5FCA00F988BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B32D74BF1EDD5FC900F988BA /* WorldOfTanks */;
+			targetProxy = B32D74E01EDD5FCA00F988BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B32D74C71EDD5FCA00F988BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B32D74C81EDD5FCA00F988BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B32D74CD1EDD5FCA00F988BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B32D74E61EDD5FCA00F988BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B32D74E71EDD5FCA00F988BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B32D74E91EDD5FCA00F988BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6DZR4K469V;
+				INFOPLIST_FILE = WorldOfTanks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ElppaGAMES.WorldOfTanks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B32D74EA1EDD5FCA00F988BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6DZR4K469V;
+				INFOPLIST_FILE = WorldOfTanks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ElppaGAMES.WorldOfTanks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B32D74EC1EDD5FCA00F988BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6DZR4K469V;
+				INFOPLIST_FILE = WorldOfTanksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ElppaGAMES.WorldOfTanksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldOfTanks.app/WorldOfTanks";
+			};
+			name = Debug;
+		};
+		B32D74ED1EDD5FCA00F988BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6DZR4K469V;
+				INFOPLIST_FILE = WorldOfTanksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ElppaGAMES.WorldOfTanksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldOfTanks.app/WorldOfTanks";
+			};
+			name = Release;
+		};
+		B32D74EF1EDD5FCA00F988BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6DZR4K469V;
+				INFOPLIST_FILE = WorldOfTanksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ElppaGAMES.WorldOfTanksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WorldOfTanks;
+			};
+			name = Debug;
+		};
+		B32D74F01EDD5FCA00F988BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6DZR4K469V;
+				INFOPLIST_FILE = WorldOfTanksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ElppaGAMES.WorldOfTanksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WorldOfTanks;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B32D74BB1EDD5FC900F988BA /* Build configuration list for PBXProject "WorldOfTanks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32D74E61EDD5FCA00F988BA /* Debug */,
+				B32D74E71EDD5FCA00F988BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B32D74E81EDD5FCA00F988BA /* Build configuration list for PBXNativeTarget "WorldOfTanks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32D74E91EDD5FCA00F988BA /* Debug */,
+				B32D74EA1EDD5FCA00F988BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B32D74EB1EDD5FCA00F988BA /* Build configuration list for PBXNativeTarget "WorldOfTanksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32D74EC1EDD5FCA00F988BA /* Debug */,
+				B32D74ED1EDD5FCA00F988BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B32D74EE1EDD5FCA00F988BA /* Build configuration list for PBXNativeTarget "WorldOfTanksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32D74EF1EDD5FCA00F988BA /* Debug */,
+				B32D74F01EDD5FCA00F988BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B32D74B81EDD5FC900F988BA /* Project object */;
+}
