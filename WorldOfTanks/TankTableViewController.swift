@@ -7,17 +7,36 @@
 //
 
 import UIKit
+import Alamofire
 
 class TankTableViewController: UITableViewController {
 
+    let NICKNAME_PLAYER_KEY = "NICKNAME_PLAYER"
+    let ACCOUNT_ID_KEY = "ACCOUNT_ID"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        let userSettings = UserDefaults.standard
+        if let existingText = userSettings.string(forKey: NICKNAME_PLAYER_KEY) {
+            let account_id: String = userSettings.string(forKey: ACCOUNT_ID_KEY)!
+            Alamofire.request("https://api.worldoftanks.eu/wot/account/tanks/?application_id=demo&account_id=\(account_id)").responseJSON(completionHandler: { (response:DataResponse<Any>) in
+                var todoAsAccount = ""
+                var todoAsPseudo = ""
+                if let jsonArray = response.result.value as? [String:Any],
+                    let data = jsonArray["data"] as? [Any],
+                    let firstObject = data.first as? [String:Any] {
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+                        todoAsAccount += "\(firstObject["account_id"] as! Int)"
+                        todoAsPseudo += "\(firstObject["nickname"] as! Int)"
+                    //                for todoData:Any in jsonArray {
+                    //                    if let todoItem:[String:Any] = todoData as? [String:Any] {
+                    //                        print(todoItem)
+                    //                        todoAsString += "Numéro de compte : \(todoItem["account_id"] as! String) \n"
+                    //                    }
+                }
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,12 +45,12 @@ class TankTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
-
+    */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
