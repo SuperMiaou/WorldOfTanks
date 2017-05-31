@@ -17,8 +17,32 @@ class TankTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchTanks()
     }
 
+    
+    func searchTanks () {
+        let userSettings = UserDefaults.standard
+            
+        let account_id: Int = userSettings.integer(forKey: "ACCOUNT_ID")
+        Alamofire.request("https://api.worldoftanks.eu/wot/account/tanks/?application_id=demo&account_id=\(account_id)").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
+            debugPrint(response)
+            var _tankId:Int
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                if let tankId = json["data"][account_id][0]["tank_id"].int {
+                    _tankId = tankId
+                    print(_tankId)
+                } else {
+                    _tankId = 0
+                }
+            case .failure(let error):
+                print(error)
+            }
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

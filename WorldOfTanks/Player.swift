@@ -39,6 +39,16 @@ class Player {
         }
     }
     
+//    var tank_id : [Int] {
+//        get {
+//            if let tid = _tank_id {
+//                return tid
+//            }
+//        } set {
+//            _tank_id = newValue
+//        }
+//    }
+    
     init(pseudo: String, account_id: Int, tank_id: Int) {
         _pseudo = pseudo
         _account_id = account_id

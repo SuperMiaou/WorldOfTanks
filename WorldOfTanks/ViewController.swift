@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 20.0))
         view.backgroundColor = .orange
         self.view.addSubview(view)
@@ -34,6 +35,13 @@ class ViewController: UIViewController {
     
     @IBAction func _btn_validSearch(_ sender: Any) {
         searchPlayer()
+        
+    }
+    
+    func GoToTankVC()  {
+        if let tankVC = storyboard?.instantiateViewController(withIdentifier: "TankVC") {
+            self.show(tankVC, sender: nil)
+        }
     }
     
     func searchPlayer () {
@@ -66,6 +74,7 @@ class ViewController: UIViewController {
                     userSettings.set(_nickname, forKey: self.NICKNAME_PLAYER_KEY)
                     userSettings.set(_accountId, forKey: self.ACCOUNT_ID_KEY)
                     userSettings.synchronize()
+                    self.GoToTankVC()
                 }
             case .failure(let error):
                 print(error)
