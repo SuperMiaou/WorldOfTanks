@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+
 
 class ViewController: UIViewController {
 
@@ -36,38 +38,38 @@ class ViewController: UIViewController {
     
     func searchPlayer () {
         let pseudo: String = ui_textPlayer.text!
-        Alamofire.request("https://api.worldoftanks.eu/wot/account/list/?application_id=demo&search=\(pseudo)").responseJSON(completionHandler: { (response:DataResponse<Any>) in
-            var todoAsAccount = ""
-            var todoAsPseudo = ""
-            debugPrint(response)
-                if let jsonArray = response.result.value as? [String:Any],
-                    let data = jsonArray["data"] as? [Any],
-                    let firstObject = data.first as? [String:Any] {
-                    
-                    if (data.count > 1) {
-                        self.ui_labelAccount.text = "TROP DE JOUEURS A AFFICHER"
-
-                    } else {
-                        todoAsAccount += "\(firstObject["account_id"] as! Int)"
-                        todoAsPseudo += "\(firstObject["nickname"] as! Int)"
-                        
-                        let userSettings = UserDefaults.standard
-                        userSettings.set(todoAsPseudo, forKey: self.NICKNAME_PLAYER_KEY)
-                        userSettings.set(todoAsAccount, forKey: self.ACCOUNT_ID_KEY)
-                        userSettings.synchronize()
-                                            
-                    }
-                    //                for todoData:Any in jsonArray {
-                    //                    if let todoItem:[String:Any] = todoData as? [String:Any] {
-                    //                        print(todoItem)
-                    //                        todoAsString += "Numéro de compte : \(todoItem["account_id"] as! String) \n"
-                    //                    }
-                    //                }
+        Alamofire.request("https://api.worldoftanks.eu/wot/account/list/?application_id=demo&search=\(pseudo)").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
+            var _accountId:Int
+            var _nickname = ""
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                if let nickname = json["data"][0]["nickname"].string {
+                   _nickname = nickname
                 } else {
-                    self.ui_labelAccount.text = "joueur introuvable"
-
-            }
-                //self.ui_labelAccount.text = todoAsAccount
+                    _nickname = ""
+                }
+                if let accountId = json["data"][0]["account_id"].int {
+                  _accountId = accountId
+                    self.ui_labelAccount.text = String(_accountId)
+                    
+                } else {
+                    _accountId = 0
+                }
+            
+                if (json["meta"]["count"] > 1) {
+                    self.ui_labelAccount.text = "TROP DE JOUEURS A AFFICHER"
+                    
+                } else {
+                    
+                    let userSettings = UserDefaults.standard
+                    userSettings.set(_nickname, forKey: self.NICKNAME_PLAYER_KEY)
+                    userSettings.set(_accountId, forKey: self.ACCOUNT_ID_KEY)
+                    userSettings.synchronize()
+                }
+            case .failure(let error):
+                print(error)
+                }
         })
     }
 
