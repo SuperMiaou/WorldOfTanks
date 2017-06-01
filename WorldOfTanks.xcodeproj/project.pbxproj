@@ -19,6 +19,8 @@
 		B32D74CE1EDD5FCA00F988BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */; };
 		B32D74D91EDD5FCA00F988BA /* WorldOfTanksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74D81EDD5FCA00F988BA /* WorldOfTanksTests.swift */; };
 		B32D74E41EDD5FCA00F988BA /* WorldOfTanksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */; };
+		B353408A1EE014C3007D33FC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35340891EE014C3007D33FC /* DataManager.swift */; };
+		B353408C1EE0159E007D33FC /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353408B1EE0159E007D33FC /* CacheManager.swift */; };
 		BF83BB669CC7717229DD9570 /* Pods_WorldOfTanksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1E778374C22B28030096FE /* Pods_WorldOfTanksTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		B32D74DF1EDD5FCA00F988BA /* WorldOfTanksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfTanksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfTanksUITests.swift; sourceTree = "<group>"; };
 		B32D74E51EDD5FCA00F988BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B35340891EE014C3007D33FC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B353408B1EE0159E007D33FC /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		BDC1B3555553BB0E06741F2D /* Pods-WorldOfTanksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanksUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanksUITests/Pods-WorldOfTanksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D811055633F3B3D4A7D90E58 /* Pods-WorldOfTanksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanksTests/Pods-WorldOfTanksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6B00A78A0342A45CA083A13 /* Pods_WorldOfTanks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfTanks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,14 +147,14 @@
 		B32D74C21EDD5FC900F988BA /* WorldOfTanks */ = {
 			isa = PBXGroup;
 			children = (
+				B353408D1EE018A5007D33FC /* Model */,
+				B35340881EE014A2007D33FC /* ModelManager */,
 				B32D74C31EDD5FC900F988BA /* AppDelegate.swift */,
 				B32D74C51EDD5FCA00F988BA /* ViewController.swift */,
 				B32D74C71EDD5FCA00F988BA /* Main.storyboard */,
 				B32D74CA1EDD5FCA00F988BA /* Assets.xcassets */,
 				B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */,
 				B32D74CF1EDD5FCA00F988BA /* Info.plist */,
-				B30CB7431EDDACCD007735F6 /* Player.swift */,
-				B30CB7451EDDAD2F007735F6 /* Vehicles.swift */,
 				B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */,
 			);
 			path = WorldOfTanks;
@@ -172,6 +176,24 @@
 				B32D74E51EDD5FCA00F988BA /* Info.plist */,
 			);
 			path = WorldOfTanksUITests;
+			sourceTree = "<group>";
+		};
+		B35340881EE014A2007D33FC /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				B35340891EE014C3007D33FC /* DataManager.swift */,
+				B353408B1EE0159E007D33FC /* CacheManager.swift */,
+			);
+			name = ModelManager;
+			sourceTree = "<group>";
+		};
+		B353408D1EE018A5007D33FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B30CB7451EDDAD2F007735F6 /* Vehicles.swift */,
+				B30CB7431EDDACCD007735F6 /* Player.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,10 +480,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30CB7461EDDAD2F007735F6 /* Vehicles.swift in Sources */,
+				B353408A1EE014C3007D33FC /* DataManager.swift in Sources */,
 				B30CB7481EDDB44D007735F6 /* TankTableViewController.swift in Sources */,
 				B32D74C61EDD5FCA00F988BA /* ViewController.swift in Sources */,
 				B30CB7441EDDACCD007735F6 /* Player.swift in Sources */,
 				B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */,
+				B353408C1EE0159E007D33FC /* CacheManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
