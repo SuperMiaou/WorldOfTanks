@@ -26,6 +26,8 @@ class TankTableViewController: UITableViewController {
     var _nationTank: String = ""
     var _tierTank: Int = 0
     
+    var _tankList:[Vehicles] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,68 +42,78 @@ class TankTableViewController: UITableViewController {
         let userSettings = UserDefaults.standard
             
         let account_id: Int = userSettings.integer(forKey: "ACCOUNT_ID")
-        Alamofire.request("https://api.worldoftanks.eu/wot/account/tanks/?application_id=demo&account_id=\(account_id)").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                if let tankId = json["data"][String(account_id)][0]["tank_id"].int {
-                    self._tankId = tankId
-                } else {
-                    self._tankId = 0
-                }
-                self.detailsTank()
-
-            case .failure(let error):
-                print(error)
-            }
-        })
+        DataManager.getInstance().loadTankListData(forAccount: account_id ) { (tankList:[Vehicles]) in
+            self._tankList = tankList
+            self.tableView.reloadData()
+//            let json = JSON(value)
+//            if let tankId = json["data"][String(account_id)][0]["tank_id"].int {
+//                self._tankId = tankId
+//            } else {
+//                self._tankId = 0
+//            }
+//            self.detailsTank()
+        }
+        
+//        Alamofire.request("https://api.worldoftanks.eu/wot/account/tanks/?application_id=demo&account_id=\(account_id)").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
+//            switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//                if let tankId = json["data"][String(account_id)][0]["tank_id"].int {
+//                    self._tankId = tankId
+//                } else {
+//                    self._tankId = 0
+//                }
+//            case .failure(let error):
+//                print(error)
+//            }
+//        })
     }
     
     //  EXECUTER LA DEUXIEME FONCTION ASYNCHRONE
     
-    func detailsTank () {
-        Alamofire.request("https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=demo&tank_id=\(self._tankId)&language=fr").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                if let nameTank = json["data"][String(self._tankId)]["name"].string {
-                    self._nameTank = nameTank
-                } else {
-                    self._nameTank = ""
-                }
-                if let imageTank = json["data"][String(self._tankId)]["images"]["small_icon"].string {
-
-                    self._imageTank = imageTank
-                } else {
-                    self._imageTank = ""
-                }
-                if let typeTank = json["data"][String(self._tankId)]["type"].string {
-                    self._typeTank = typeTank
-                } else {
-                    self._typeTank = ""
-                }
-                if let descriptionTank = json["data"][String(self._tankId)]["description"].string {
-                    self._descriptionTank = descriptionTank
-                } else {
-                    self._descriptionTank = ""
-                }
-                if let nationTank = json["data"][String(self._tankId)]["nation"].string {
-                    self._nationTank = nationTank
-                } else {
-                    self._nationTank = ""
-                }
-                if let tierTank = json["data"][String(self._tankId)]["tier"].int {
-                    self._tierTank = tierTank
-                } else {
-                    self._tierTank = 0
-                }
-                self.ui_tableView.reloadData()
-
-            case .failure(let error):
-                print(error)
-            }
-        })
-    }
+//    func detailsTank () {
+//        Alamofire.request("https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=demo&tank_id=\(self._tankId)&language=fr").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
+//            switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//                if let nameTank = json["data"][String(self._tankId)]["name"].string {
+//                    self._nameTank = nameTank
+//                } else {
+//                    self._nameTank = ""
+//                }
+//                if let imageTank = json["data"][String(self._tankId)]["images"]["small_icon"].string {
+//
+//                    self._imageTank = imageTank
+//                } else {
+//                    self._imageTank = ""
+//                }
+//                if let typeTank = json["data"][String(self._tankId)]["type"].string {
+//                    self._typeTank = typeTank
+//                } else {
+//                    self._typeTank = ""
+//                }
+//                if let descriptionTank = json["data"][String(self._tankId)]["description"].string {
+//                    self._descriptionTank = descriptionTank
+//                } else {
+//                    self._descriptionTank = ""
+//                }
+//                if let nationTank = json["data"][String(self._tankId)]["nation"].string {
+//                    self._nationTank = nationTank
+//                } else {
+//                    self._nationTank = ""
+//                }
+//                if let tierTank = json["data"][String(self._tankId)]["tier"].int {
+//                    self._tierTank = tierTank
+//                } else {
+//                    self._tierTank = 0
+//                }
+//                self.ui_tableView.reloadData()
+//
+//            case .failure(let error):
+//                print(error)
+//            }
+//        })
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -117,21 +129,18 @@ class TankTableViewController: UITableViewController {
     */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return _tankList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if
-        let tank1 = Vehicles(name: _nameTank, description: _descriptionTank, type: _typeTank, tier: _tierTank, picture: _imageTank, nation: _nationTank)
 
-        var tanks = [tank1]
         let cell = tableView.dequeueReusableCell(withIdentifier: "tankIdentifier")!
 
-        cell.textLabel?.text = "\(tanks[indexPath.row].name)"
+        let tank = _tankList[indexPath.row]
+        cell.textLabel?.text = "\(tank.name)"
         //cell.imageView?.image = tanks[indexPath.row].image
-        cell.detailTextLabel?.text = "\(tanks[indexPath.row].nation)"
+        cell.detailTextLabel?.text = "\(tank.nation)"
         
         // Configure the cell...
 

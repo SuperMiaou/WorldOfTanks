@@ -8,16 +8,30 @@
 
 import Foundation
 import UIKit
+import ObjectMapper
 
 
-class Vehicles {
-    
+class Vehicles : Mappable {
     var _name : String
     var _description : String
     var _tier : Int
     var _type : String
     var _picture : String
     var _nation: String
+    
+    required init?(map: Map) {
+        _name = ""
+        _description = ""
+        _tier = 0
+        _type = ""
+        _picture = ""
+        _nation = ""
+    }
+    
+    func mapping(map: Map) {
+        _name <- map["name"]
+        _nation <- map["nation"]
+    }
     
     
     var name : String {
