@@ -123,7 +123,6 @@ class TankTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if
         let tank1 = Vehicles(name: _nameTank, description: _descriptionTank, type: _typeTank, tier: _tierTank, picture: _imageTank, nation: _nationTank)
 
         var tanks = [tank1]
