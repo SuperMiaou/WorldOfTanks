@@ -12,12 +12,27 @@ import SwiftyJSON
 
 class TankTableViewController: UITableViewController {
 
+    @IBOutlet var ui_tableView: UITableView!
+    
+    
     let NICKNAME_PLAYER_KEY = "NICKNAME_PLAYER"
     let ACCOUNT_ID_KEY = "ACCOUNT_ID"
+    var _tankId:Int = 0
+    
+    var _nameTank: String = ""
+    var _imageTank: String = ""
+    var _typeTank: String = ""
+    var _descriptionTank: String = ""
+    var _nationTank: String = ""
+    var _tierTank: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ui_tableView.dataSource = self
+
         searchTanks()
+
     }
 
     
@@ -26,17 +41,62 @@ class TankTableViewController: UITableViewController {
             
         let account_id: Int = userSettings.integer(forKey: "ACCOUNT_ID")
         Alamofire.request("https://api.worldoftanks.eu/wot/account/tanks/?application_id=demo&account_id=\(account_id)").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
-            debugPrint(response)
-            var _tankId:Int
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                if let tankId = json["data"][account_id][0]["tank_id"].int {
-                    _tankId = tankId
-                    print(_tankId)
+                if let tankId = json["data"][String(account_id)][0]["tank_id"].int {
+                    self._tankId = tankId
                 } else {
-                    _tankId = 0
+                    self._tankId = 0
                 }
+                self.detailsTank()
+
+            case .failure(let error):
+                print(error)
+            }
+        })
+    }
+    
+    //  EXECUTER LA DEUXIEME FONCTION ASYNCHRONE
+    
+    func detailsTank () {
+        Alamofire.request("https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=demo&tank_id=\(self._tankId)&language=fr").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                if let nameTank = json["data"][String(self._tankId)]["name"].string {
+                    self._nameTank = nameTank
+                } else {
+                    self._nameTank = ""
+                }
+                if let imageTank = json["data"][String(self._tankId)]["images"]["small_icon"].string {
+
+                    self._imageTank = imageTank
+                } else {
+                    self._imageTank = ""
+                }
+                if let typeTank = json["data"][String(self._tankId)]["type"].string {
+                    self._typeTank = typeTank
+                } else {
+                    self._typeTank = ""
+                }
+                if let descriptionTank = json["data"][String(self._tankId)]["description"].string {
+                    self._descriptionTank = descriptionTank
+                } else {
+                    self._descriptionTank = ""
+                }
+                if let nationTank = json["data"][String(self._tankId)]["nation"].string {
+                    self._nationTank = nationTank
+                } else {
+                    self._nationTank = ""
+                }
+                if let tierTank = json["data"][String(self._tankId)]["tier"].int {
+                    self._tierTank = tierTank
+                } else {
+                    self._tierTank = 0
+                }
+                self.ui_tableView.reloadData()
+
             case .failure(let error):
                 print(error)
             }
@@ -57,13 +117,22 @@ class TankTableViewController: UITableViewController {
     */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        if
+        let tank1 = Vehicles(name: _nameTank, description: _descriptionTank, type: _typeTank, tier: _tierTank, picture: _imageTank, nation: _nationTank)
 
+        var tanks = [tank1]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tankIdentifier")!
+
+        cell.textLabel?.text = "\(tanks[indexPath.row].name)"
+        //cell.imageView?.image = tanks[indexPath.row].image
+        cell.detailTextLabel?.text = "\(tanks[indexPath.row].nation)"
+        
         // Configure the cell...
 
         return cell
@@ -88,31 +157,5 @@ class TankTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
- 
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
