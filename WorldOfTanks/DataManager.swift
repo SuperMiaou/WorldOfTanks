@@ -47,7 +47,7 @@ class DataManager {
     
     func loadTankData(forTankId tankId:Int, onSuccess:@escaping (Vehicles)->Void) {
         print("loadTankData \(tankId)")
-        loadData(forUrl: "https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=demo&tank_id=\(tankId)") { (jsonData:JSON) in
+        loadData(forUrl: "https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&tank_id=\(tankId)") { (jsonData:JSON) in
             print(" -> loadTankData \(tankId)")
             debugPrint(jsonData)
             if let tankStringData = jsonData["data"]["\(tankId)"].rawString(),
@@ -58,17 +58,16 @@ class DataManager {
     }
     
     
-    
     func loadTankListData(forAccount account_id:Int, onTankListUpdated:@escaping ([Vehicles])->Void) {
         print("loadTankListData")
-        loadData(forUrl: "https://api.worldoftanks.eu/wot/account/tanks/?application_id=demo&account_id=\(account_id)") { (jsonData:JSON) in
+        loadData(forUrl: "https://api.worldoftanks.eu/wot/account/tanks/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&account_id=\(account_id)") { (jsonData:JSON) in
             debugPrint(jsonData)
             var tankList:[Vehicles] = []
             let tankJsonList = jsonData["data"]["\(account_id)"]
             var interval:TimeInterval = 0
             for (_,tankData):(String, JSON) in tankJsonList {
                 if let tankId = tankData["tank_id"].int {
-                    interval += 0.8
+                    interval += 0.1
                     Timer.scheduledTimer(withTimeInterval: interval, repeats: false, block: { _ in
                         self.loadTankData(forTankId: tankId, onSuccess: { (tank:Vehicles) in
                             tankList.append(tank)
