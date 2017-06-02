@@ -102,40 +102,14 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V4r-uN-c97" id="7Cs-OZ-uyy">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="68.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k9v-OV-ELi">
-                                            <rect key="frame" x="15" y="18" width="33" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FIS-6t-ajW">
-                                            <rect key="frame" x="15" y="39" width="44" height="14"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TnM-dP-kXG">
-                                            <rect key="frame" x="116" y="41" width="20" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="Iq7-df-ckC"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="TnM-dP-kXG" secondAttribute="bottom" id="4E9-I8-AZm"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <constraints>
                                     <constraint firstAttribute="top" secondItem="V4r-uN-c97" secondAttribute="top" id="d7g-oh-1bj"/>
                                     <constraint firstAttribute="top" secondItem="V4r-uN-c97" secondAttribute="top" constant="4" id="pga-wb-diM"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="ui_imageViewNationTank" destination="TnM-dP-kXG" id="li3-0C-yGP"/>
                                     <segue destination="7ZU-Us-Y3W" kind="show" id="Byh-0C-6vD"/>
                                 </connections>
                             </tableViewCell>
