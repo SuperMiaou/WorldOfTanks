@@ -118,7 +118,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TnM-dP-kXG">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TnM-dP-kXG">
                                             <rect key="frame" x="116" y="41" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="Iq7-df-ckC"/>
@@ -126,23 +126,15 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="JA8-gU-CXZ" secondAttribute="trailing" constant="-18" id="0fz-Qy-2YZ"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="TnM-dP-kXG" secondAttribute="bottom" id="4E9-I8-AZm"/>
-                                        <constraint firstItem="TnM-dP-kXG" firstAttribute="top" secondItem="JA8-gU-CXZ" secondAttribute="bottom" constant="11" id="HNv-EG-uie"/>
-                                        <constraint firstItem="TnM-dP-kXG" firstAttribute="leading" secondItem="GrM-C7-MWe" secondAttribute="trailing" constant="8" id="KZJ-Xc-vNe"/>
-                                        <constraint firstItem="JA8-gU-CXZ" firstAttribute="leading" secondItem="GrM-C7-MWe" secondAttribute="trailing" constant="8" id="bua-uE-wed"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="GrM-C7-MWe" secondAttribute="bottom" constant="-8.3333333333333286" id="cAR-YC-fUm"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="GrM-C7-MWe" secondAttribute="leading" id="yuU-Ap-pe9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <constraints>
-                                    <constraint firstItem="GrM-C7-MWe" firstAttribute="top" secondItem="V4r-uN-c97" secondAttribute="top" id="d7g-oh-1bj"/>
-                                    <constraint firstItem="JA8-gU-CXZ" firstAttribute="top" secondItem="V4r-uN-c97" secondAttribute="top" constant="4" id="pga-wb-diM"/>
+                                    <constraint firstAttribute="top" secondItem="V4r-uN-c97" secondAttribute="top" id="d7g-oh-1bj"/>
+                                    <constraint firstAttribute="top" secondItem="V4r-uN-c97" secondAttribute="top" constant="4" id="pga-wb-diM"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="ui_imageViewNationTank" destination="TnM-dP-kXG" id="li3-0C-yGP"/>
-                                    <outlet property="ui_imageViewTank" destination="GrM-C7-MWe" id="ait-oD-bWn"/>
-                                    <outlet property="ui_labelTank" destination="JA8-gU-CXZ" id="MQ0-VC-KY7"/>
                                     <segue destination="7ZU-Us-Y3W" kind="show" id="Byh-0C-6vD"/>
                                 </connections>
                             </tableViewCell>
