@@ -32,6 +32,9 @@ class Vehicles : Mappable {
         _name <- map["name"]
         _image <- map["images.big_icon"]
         _nation <- map["nation"]
+        _description <- map["description"]
+        _type <- map ["type"]
+        _tier <- map ["tier"]
     }
     
     

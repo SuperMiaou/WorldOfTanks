@@ -13,7 +13,7 @@ import AlamofireImage
 
 class TankTableViewCell: UITableViewCell {
     @IBOutlet weak var ui_imageViewTank: UIImageView!
-    @IBOutlet weak var ui_labelTank: UILabel!
+    @IBOutlet weak var ui_labelNameTank: UILabel!
     @IBOutlet weak var ui_imageViewNationTank: UIImageView!
     
 }
@@ -151,7 +151,7 @@ class TankTableViewController: UITableViewController {
         //cell.detailTextLabel?.text = "\(tank.nation)"
 
 
-        cell.ui_labelTank.text = "\(tank.name)"
+        cell.ui_labelNameTank.text = "\(tank.name)"
         cell.ui_imageViewTank?.af_setImage(withURL: URL(string: tank.image)!)
         
         
@@ -176,16 +176,14 @@ class TankTableViewController: UITableViewController {
         }
         return cell
     }
-
     
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mySegue" ,
+        let nextScene = segue.destination as? DetailTankViewController ,
+        let indexPath = self.tableView.indexPathForSelectedRow {
+            let selectedVehicle = _tankList[indexPath.row]
+            nextScene._currentVehicle = selectedVehicle
+        }
     }
 
 }
