@@ -105,14 +105,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k9v-OV-ELi">
-                                            <rect key="frame" x="15" y="18" width="33.333333333333336" height="20.333333333333332"/>
+                                            <rect key="frame" x="15" y="18" width="33" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FIS-6t-ajW">
-                                            <rect key="frame" x="14.999999999999996" y="38.333333333333329" width="43.666666666666664" height="14.333333333333334"/>
+                                            <rect key="frame" x="15" y="39" width="44" height="14"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
