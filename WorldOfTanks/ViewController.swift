@@ -11,11 +11,13 @@ import Alamofire
 import SwiftyJSON
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var ui_textPlayer: UITextField!
     @IBOutlet weak var ui_labelAccount: UILabel!
+    @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
+
     
     let NICKNAME_PLAYER_KEY = "NICKNAME_PLAYER"
     let ACCOUNT_ID_KEY = "ACCOUNT_ID"
@@ -29,9 +31,37 @@ class ViewController: UIViewController {
         view.backgroundColor = .orange
         self.view.addSubview(view)
         
+        ui_textPlayer.delegate = self
+        ui_textPlayer.returnKeyType = .next
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            self._btn_validSearch(self)
+            return false
+            
         // Do any additional setup after loading the view, typically from a nib.
+        }
     }
 
+        func keyboardWillShow(notification: NSNotification) {
+            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y == 0{
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
+            }
+        }
+        
+        func keyboardWillHide(notification: NSNotification) {
+            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y != 0{
+                    self.view.frame.origin.y += keyboardSize.height
+                }
+            }
+        }
+        
     
     @IBAction func _btn_validSearch(_ sender: Any) {
         searchPlayer()
@@ -66,7 +96,7 @@ class ViewController: UIViewController {
                 }
             
                 if (json["meta"]["count"] == 0 ) {
-                    self.ui_labelAccount.text = "Le Joueur n'existe pas"
+                    self.ui_labelAccount.text = "LE JOUEUR N'EXISTE PAS"
 
                 } else {
                     if (json["meta"]["count"] > 1) {

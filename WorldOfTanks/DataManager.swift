@@ -47,7 +47,7 @@ class DataManager {
     
     func loadTankData(forTankId tankId:Int, onSuccess:@escaping (Vehicles)->Void) {
         print("loadTankData \(tankId)")
-        loadData(forUrl: "https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&tank_id=\(tankId)") { (jsonData:JSON) in
+        loadData(forUrl: "https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&tank_id=\(tankId)&language=fr") { (jsonData:JSON) in
             if let tankStringData = jsonData["data"]["\(tankId)"].rawString(),
                 let vehicle = Vehicles(JSONString: tankStringData) {
                 onSuccess(vehicle)

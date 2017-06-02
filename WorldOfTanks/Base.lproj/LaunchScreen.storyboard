@@ -21,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="GAMES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIK-tB-Nuo">
-                                <rect key="frame" x="122" y="323" width="131.5" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAMES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIK-tB-Nuo">
+                                <rect key="frame" x="122" y="310" width="131.5" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Elppa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvQ-pu-LEI">
-                                <rect key="frame" x="137" y="278" width="101" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ElppA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvQ-pu-LEI">
+                                <rect key="frame" x="135" y="253" width="105.5" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +37,9 @@
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LIK-tB-Nuo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mNY-6Z-uzD"/>
+                            <constraint firstItem="LIK-tB-Nuo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="nO0-ks-hwB"/>
                             <constraint firstItem="fvQ-pu-LEI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pkM-aE-G6Z"/>
+                            <constraint firstItem="LIK-tB-Nuo" firstAttribute="top" secondItem="fvQ-pu-LEI" secondAttribute="bottom" constant="8" id="vJx-54-uh1"/>
                         </constraints>
                     </view>
                 </viewController>

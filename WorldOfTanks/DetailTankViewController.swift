@@ -12,7 +12,7 @@ import AlamofireImage
 
 class DetailTankViewController: UIViewController {
 
-    
+    @IBOutlet weak var ui_textViewDescription: UITextView!
     @IBOutlet weak var ui_labelNameTank: UILabel!
     @IBOutlet weak var ui_imageViewTank: UIImageView!
     @IBOutlet weak var ui_imageViewNationTank: UIImageView!
@@ -27,7 +27,40 @@ class DetailTankViewController: UIViewController {
         ui_labelNameTank.text = _currentVehicle!._name
         ui_imageViewTank?.af_setImage(withURL: URL(string: _currentVehicle!._image)!)
         ui_labelTierTank.text = String(_currentVehicle!._tier)
-        ui_labelTypeTank.text = _currentVehicle!._type
+        ui_textViewDescription.text = _currentVehicle!._description
+        
+        if (_currentVehicle!._tier == 1) {
+            ui_labelTierTank.text = "I"
+        } else if (_currentVehicle!._tier == 2) {
+            ui_labelTierTank.text = "II"
+        } else if (_currentVehicle!._tier == 3) {
+            ui_labelTierTank.text = "III"
+        } else if (_currentVehicle!._tier == 4) {
+            ui_labelTierTank.text = "IV"
+        } else if (_currentVehicle!._tier == 5) {
+            ui_labelTierTank.text = "V"
+        } else if (_currentVehicle!._tier == 6) {
+            ui_labelTierTank.text = "VI"
+        } else if (_currentVehicle!._tier == 7) {
+            ui_labelTierTank.text = "VII"
+        } else if (_currentVehicle!._tier == 8) {
+            ui_labelTierTank.text = "VIII"
+        } else if (_currentVehicle!._tier == 9) {
+            ui_labelTierTank.text = "IX"
+        } else if (_currentVehicle!._tier == 10) {
+            ui_labelTierTank.text = "X"
+        }
+        
+        if (_currentVehicle!._type == "lightTank") {
+            ui_labelTypeTank.text = "Char Leger"
+        } else if (_currentVehicle!._type == "mediumTank") {
+            ui_labelTypeTank.text = "Char Moyen"
+        } else if (_currentVehicle!._type == "heavyTank") {
+            ui_labelTypeTank.text = "Char Lourd"
+        } else if (_currentVehicle!._type == "SPG") {
+            ui_labelTypeTank.text = "Canon Automoteur"
+        }
+        
         
         if (_currentVehicle!._nation == "france") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "fra")
