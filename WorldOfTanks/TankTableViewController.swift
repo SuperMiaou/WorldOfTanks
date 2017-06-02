@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import AlamofireImage
 
 class TankTableViewController: UITableViewController {
 
@@ -45,6 +46,7 @@ class TankTableViewController: UITableViewController {
         DataManager.getInstance().loadTankListData(forAccount: account_id ) { (tankList:[Vehicles]) in
             self._tankList = tankList
             self.tableView.reloadData()
+            
 //            let json = JSON(value)
 //            if let tankId = json["data"][String(account_id)][0]["tank_id"].int {
 //                self._tankId = tankId
@@ -131,7 +133,6 @@ class TankTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return _tankList.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
@@ -139,22 +140,12 @@ class TankTableViewController: UITableViewController {
 
         let tank = _tankList[indexPath.row]
         cell.textLabel?.text = "\(tank.name)"
-        //cell.imageView?.image = tanks[indexPath.row].image
+        cell.imageView?.af_setImage(withURL: URL(string: tank.image)!)
         cell.detailTextLabel?.text = "\(tank.nation)"
         
-        // Configure the cell...
 
         return cell
     }
-    
-
-    
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    
 
     
     // Override to support editing the table view.

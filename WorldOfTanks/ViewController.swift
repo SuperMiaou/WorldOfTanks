@@ -65,16 +65,21 @@ class ViewController: UIViewController {
                     _accountId = 0
                 }
             
-                if (json["meta"]["count"] > 1) {
-                    self.ui_labelAccount.text = "TROP DE JOUEURS A AFFICHER"
-                    
+                if (json["meta"]["count"] == 0 ) {
+                    self.ui_labelAccount.text = "Le Joueur n'existe pas"
+
                 } else {
+                    if (json["meta"]["count"] > 1) {
+                        self.ui_labelAccount.text = "TROP DE JOUEURS A AFFICHER"
                     
-                    let userSettings = UserDefaults.standard
-                    userSettings.set(_nickname, forKey: self.NICKNAME_PLAYER_KEY)
-                    userSettings.set(_accountId, forKey: self.ACCOUNT_ID_KEY)
-                    userSettings.synchronize()
-                    self.GoToTankVC()
+                    } else {
+                    
+                        let userSettings = UserDefaults.standard
+                        userSettings.set(_nickname, forKey: self.NICKNAME_PLAYER_KEY)
+                        userSettings.set(_accountId, forKey: self.ACCOUNT_ID_KEY)
+                        userSettings.synchronize()
+                        self.GoToTankVC()
+                    }
                 }
             case .failure(let error):
                 print(error)
