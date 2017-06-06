@@ -15,6 +15,7 @@ class TankTableViewCell: UITableViewCell {
     @IBOutlet weak var ui_imageViewTank: UIImageView!
     @IBOutlet weak var ui_labelNameTank: UILabel!
     @IBOutlet weak var ui_imageViewNationTank: UIImageView!
+    @IBOutlet weak var ui_labelNilTank: UILabel!
     
 }
 
@@ -138,6 +139,11 @@ class TankTableViewController: UITableViewController {
     */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
+        if _tankList.count == 0 {
+            return 1
+        }
+        
         return _tankList.count
     }
     
@@ -145,34 +151,51 @@ class TankTableViewController: UITableViewController {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "tankIdentifier", for: indexPath) as! TankTableViewCell
         
-        let tank = _tankList[indexPath.row]
-        //cell.textLabel?.text = "\(tank.name)"
-        //cell.imageView?.af_setImage(withURL: URL(string: tank.image)!)
-        //cell.detailTextLabel?.text = "\(tank.nation)"
-
-
-        cell.ui_labelNameTank.text = "\(tank.name)"
-        cell.ui_imageViewTank?.af_setImage(withURL: URL(string: tank.image)!)
+        if _tankList.count != 0 {
+            var interval:TimeInterval = 0
+            interval += 1.0
+            Timer.scheduledTimer(withTimeInterval: interval, repeats: false, block: { _ in
+                let tank = self._tankList[indexPath.row]
+            
+                //cell.textLabel?.text = "\(tank.name)"
+                //cell.imageView?.af_setImage(withURL: URL(string: tank.image)!)
+                //cell.detailTextLabel?.text = "\(tank.nation)"
+                
+                cell.ui_labelNameTank.isHidden = false
+                cell.ui_imageViewTank.isHidden = false
+                cell.ui_imageViewNationTank.isHidden = false
+                cell.isUserInteractionEnabled = true
+                cell.ui_labelNilTank.isHidden = true
+                
+                cell.ui_labelNameTank.text = "\(tank.name)"
+                cell.ui_imageViewTank?.af_setImage(withURL: URL(string: tank.image)!)
         
-        
-        if (tank.nation == "france") {
-            cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "fra")
-        } else if (tank.nation == "usa") {
-           cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "usa")
-        } else if (tank.nation == "germany") {
-            cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "all")
-        } else if (tank.nation == "ussr") {
-            cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "urss")
-        } else if (tank.nation == "czech") {
-            cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "czech")
-        } else if (tank.nation == "sweden") {
-            cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "sweden")
-        } else if (tank.nation == "japan") {
-            cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "jap")
-        } else if (tank.nation == "uk") {
-            cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "uk")
-        } else if (tank.nation == "china") {
-            cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "chine")
+                if (tank.nation == "france") {
+                    cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "fra")
+                } else if (tank.nation == "usa") {
+                    cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "usa")
+                } else if (tank.nation == "germany") {
+                    cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "all")
+                } else if (tank.nation == "ussr") {
+                    cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "urss")
+                } else if (tank.nation == "czech") {
+                    cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "czech")
+                } else if (tank.nation == "sweden") {
+                    cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "sweden")
+                } else if (tank.nation == "japan") {
+                    cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "jap")
+                } else if (tank.nation == "uk") {
+                    cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "uk")
+                } else if (tank.nation == "china") {
+                    cell.ui_imageViewNationTank.image = #imageLiteral(resourceName: "chine")
+                }
+            })
+        } else {
+            var interval:TimeInterval = 0
+            interval += 1.0
+            Timer.scheduledTimer(withTimeInterval: interval, repeats: false, block: { _ in
+                cell.ui_labelNilTank.text = "Le joueur ne possède pas de tank"
+            })
         }
         return cell
     }

@@ -24,6 +24,7 @@ class DetailTankViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         ui_labelNameTank.text = _currentVehicle!._name
         ui_imageViewTank?.af_setImage(withURL: URL(string: _currentVehicle!._image)!)
         ui_labelTierTank.text = String(_currentVehicle!._tier)

@@ -12,18 +12,18 @@ import SwiftyJSON
 
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    
     
     @IBOutlet weak var ui_tableViewPlayer: UITableView!
     @IBOutlet weak var ui_textPlayer: UITextField!
     @IBOutlet weak var ui_labelAccount: UILabel!
     @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
-
+    
     
     let NICKNAME_PLAYER_KEY = "NICKNAME_PLAYER"
     let ACCOUNT_ID_KEY = "ACCOUNT_ID"
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,26 +43,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self._btn_validSearch(self)
             return false
             
-        // Do any additional setup after loading the view, typically from a nib.
+            // Do any additional setup after loading the view, typically from a nib.
         }
     }
-
-        func keyboardWillShow(notification: NSNotification) {
-            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                if self.view.frame.origin.y == 0{
-                    self.view.frame.origin.y -= keyboardSize.height
-                }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
             }
         }
-        
-        func keyboardWillHide(notification: NSNotification) {
-            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                if self.view.frame.origin.y != 0{
-                    self.view.frame.origin.y += keyboardSize.height
-                }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
             }
         }
-        
+    }
+    
     
     @IBAction func _btn_validSearch(_ sender: Any) {
         searchPlayer()
@@ -77,37 +77,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func searchPlayer () {
         let pseudo: String = ui_textPlayer.text!
-        Alamofire.request("https://api.worldoftanks.eu/wot/account/list/?application_id=demo&search=\(pseudo)").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
+        Alamofire.request("https://api.worldoftanks.eu/wot/account/list/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&search=\(pseudo)&type=exact").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
             var _accountId:Int
             var _nickname = ""
+            
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 if let nickname = json["data"][0]["nickname"].string {
-                   _nickname = nickname
+                    _nickname = nickname
                 } else {
                     _nickname = ""
                 }
                 if let accountId = json["data"][0]["account_id"].int {
-                  _accountId = accountId
+                    _accountId = accountId
                     self.ui_labelAccount.text = String(_accountId)
                     
                 } else {
                     _accountId = 0
                 }
-            
+                
                 if (json["meta"]["count"] == 0 ) {
                     self.ui_labelAccount.text = "LE JOUEUR N'EXISTE PAS"
-
+                    
                 } else {
                     if (json["meta"]["count"] > 1) {
                         self.ui_tableViewPlayer.isHidden = false
                         
                         
                         self.ui_labelAccount.text = "TROP DE JOUEURS A AFFICHER"
-                    
+                        
                     } else {
-                    
+                        
                         let userSettings = UserDefaults.standard
                         userSettings.set(_nickname, forKey: self.NICKNAME_PLAYER_KEY)
                         userSettings.set(_accountId, forKey: self.ACCOUNT_ID_KEY)
@@ -117,15 +118,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
             case .failure(let error):
                 print(error)
-                }
+            }
         })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
+
+
 

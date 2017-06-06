@@ -8,12 +8,24 @@
 
 import Foundation
 import UIKit
+import ObjectMapper
 
 class Player {
     
     var _pseudo : String
     var _account_id : Int
     var _tank_id : Int
+    
+    required init?(map: Map) {
+        _pseudo = ""
+        _account_id = 0
+        _tank_id = 0
+
+    }
+    
+    func mapping(map: Map) {
+        _pseudo <- map["nickname"]
+    }
     
     var pseudo : String {
         get {
