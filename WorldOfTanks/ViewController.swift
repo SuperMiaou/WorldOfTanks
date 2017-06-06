@@ -14,6 +14,7 @@ import SwiftyJSON
 class ViewController: UIViewController, UITextFieldDelegate {
 
     
+    @IBOutlet weak var ui_tableViewPlayer: UITableView!
     @IBOutlet weak var ui_textPlayer: UITextField!
     @IBOutlet weak var ui_labelAccount: UILabel!
     @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
@@ -100,6 +101,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
                 } else {
                     if (json["meta"]["count"] > 1) {
+                        self.ui_tableViewPlayer.isHidden = false
+                        
+                        
                         self.ui_labelAccount.text = "TROP DE JOUEURS A AFFICHER"
                     
                     } else {
