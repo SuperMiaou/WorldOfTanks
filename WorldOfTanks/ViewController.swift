@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var ui_tableViewPlayer: UITableView!
     @IBOutlet weak var ui_textPlayer: UITextField!
-    @IBOutlet weak var ui_labelAccount: UILabel!
+    @IBOutlet weak var ui_labelAlert: UILabel!
     @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
     
     
@@ -80,42 +80,46 @@ class ViewController: UIViewController, UITextFieldDelegate {
         Alamofire.request("https://api.worldoftanks.eu/wot/account/list/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&search=\(pseudo)&type=exact").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
             var _accountId:Int
             var _nickname = ""
-            
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                if let nickname = json["data"][0]["nickname"].string {
-                    _nickname = nickname
+                if (pseudo.characters.count < 3) {
+                    self.ui_labelAlert.text = "Veuillez renseigner un joueur avec minimum 3 caractères"
                 } else {
-                    _nickname = ""
-                }
-                if let accountId = json["data"][0]["account_id"].int {
-                    _accountId = accountId
-                    self.ui_labelAccount.text = String(_accountId)
-                    
-                } else {
-                    _accountId = 0
-                }
-                
-                if (json["meta"]["count"] == 0 ) {
-                    self.ui_labelAccount.text = "LE JOUEUR N'EXISTE PAS"
-                    
-                } else {
-                    if (json["meta"]["count"] > 1) {
-                        self.ui_tableViewPlayer.isHidden = false
-                        
-                        
-                        self.ui_labelAccount.text = "TROP DE JOUEURS A AFFICHER"
+                    if let nickname = json["data"][0]["nickname"].string {
+                        _nickname = nickname
+                    } else {
+                        _nickname = ""
+                    }
+                    if let accountId = json["data"][0]["account_id"].int {
+                        _accountId = accountId
+                        self.ui_labelAlert.text = String(_accountId)
                         
                     } else {
+                        _accountId = 0
+                    }
+                    
+                    if (json["meta"]["count"] == 0 ) {
+                        self.ui_labelAlert.text = "LE JOUEUR N'EXISTE PAS"
                         
-                        let userSettings = UserDefaults.standard
-                        userSettings.set(_nickname, forKey: self.NICKNAME_PLAYER_KEY)
-                        userSettings.set(_accountId, forKey: self.ACCOUNT_ID_KEY)
-                        userSettings.synchronize()
-                        self.GoToTankVC()
+                    } else {
+                        if (json["meta"]["count"] > 1) {
+                            self.ui_tableViewPlayer.isHidden = false
+                            
+                            
+                            self.ui_labelAlert.text = "TROP DE JOUEURS A AFFICHER"
+                            
+                        } else {
+                            
+                            let userSettings = UserDefaults.standard
+                            userSettings.set(_nickname, forKey: self.NICKNAME_PLAYER_KEY)
+                            userSettings.set(_accountId, forKey: self.ACCOUNT_ID_KEY)
+                            userSettings.synchronize()
+                            self.GoToTankVC()
+                        }
                     }
                 }
+
             case .failure(let error):
                 print(error)
             }
