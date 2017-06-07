@@ -46,7 +46,7 @@ class DataManager {
     }
     
     func loadTankData(forTankId tankId:Int, onSuccess:@escaping (Vehicles)->Void) {
-        print("loadTankData \(tankId)")
+        //print("loadTankData \(tankId)")
         loadData(forUrl: "https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&tank_id=\(tankId)&language=fr") { (jsonData:JSON) in
             if let tankStringData = jsonData["data"]["\(tankId)"].rawString(),
                 let vehicle = Vehicles(JSONString: tankStringData) {
@@ -57,7 +57,7 @@ class DataManager {
     
     
     func loadTankListData(forAccount account_id:Int, onTankListUpdated:@escaping ([Vehicles])->Void) {
-        print("loadTankListData")
+        //print("loadTankListData")
         loadData(forUrl: "https://api.worldoftanks.eu/wot/account/tanks/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&account_id=\(account_id)") { (jsonData:JSON) in
             debugPrint(jsonData)
             var tankList:[Vehicles] = []
@@ -81,4 +81,13 @@ class DataManager {
         }
     }
     
+    func loadPlayerData(forPlayerName nickname:String, onSuccess:@escaping (Player)->Void) {
+        print("loadPlayerData \(nickname)")
+        loadData(forUrl: "https://api.worldoftanks.eu/wot/account/list/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&search=\(nickname)&type=exact") { (jsonData:JSON) in
+            if let playerStringData = jsonData["data"][0]["\(nickname)"].rawString(),
+                let nickname = Player(JSONString: playerStringData) {
+                onSuccess(nickname)
+            }
+        }
+    }
 }
