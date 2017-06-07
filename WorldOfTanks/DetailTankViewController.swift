@@ -18,6 +18,7 @@ class DetailTankViewController: UIViewController {
     @IBOutlet weak var ui_imageViewNationTank: UIImageView!
     @IBOutlet weak var ui_labelTypeTank: UILabel!
     @IBOutlet weak var ui_labelTierTank: UILabel!
+    @IBOutlet weak var ui_imageViewTypeTank: UIImageView!
     
     var _currentVehicle:Vehicles?
     
@@ -53,13 +54,15 @@ class DetailTankViewController: UIViewController {
         }
         
         if (_currentVehicle!._type == "lightTank") {
-            ui_labelTypeTank.text = "Char Leger"
+            ui_labelTypeTank.text = "Char Leger"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "light")
         } else if (_currentVehicle!._type == "mediumTank") {
-            ui_labelTypeTank.text = "Char Moyen"
+            ui_labelTypeTank.text = "Char Moyen"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "medium")
         } else if (_currentVehicle!._type == "heavyTank") {
-            ui_labelTypeTank.text = "Char Lourd"
+            ui_labelTypeTank.text = "Char Lourd"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "heavy")
         } else if (_currentVehicle!._type == "SPG") {
-            ui_labelTypeTank.text = "Canon Automoteur"
+            ui_labelTypeTank.text = "Canon Automoteur"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "arty")
+        } else if (_currentVehicle!._type == "AT-SPG") {
+            ui_labelTypeTank.text = "Chasseur de chars"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "td")
         }
         
         

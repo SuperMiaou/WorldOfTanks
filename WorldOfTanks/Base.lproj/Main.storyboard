@@ -219,22 +219,22 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rang" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZw-f8-Fb4">
-                                <rect key="frame" x="16" y="297" width="178" height="21"/>
+                                <rect key="frame" x="16" y="297" width="47" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="178" id="Gl7-G4-BN9"/>
+                                    <constraint firstAttribute="width" constant="47" id="Gl7-G4-BN9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tier tank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpo-NU-OGN">
-                                <rect key="frame" x="202" y="297" width="157" height="21"/>
+                                <rect key="frame" x="71" y="297" width="157" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type tank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRr-v3-u96">
-                                <rect key="frame" x="16" y="268" width="343" height="21"/>
+                                <rect key="frame" x="16" y="268" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -246,6 +246,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-Pq-SEq">
+                                <rect key="frame" x="339" y="72" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.25756026329999998" green="0.25756026329999998" blue="0.25756026329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -255,10 +259,10 @@
                             <constraint firstItem="EuL-qi-WA7" firstAttribute="top" secondItem="5ae-D9-fXU" secondAttribute="bottom" constant="8" id="9FJ-DU-g5i"/>
                             <constraint firstAttribute="leadingMargin" secondItem="FRr-v3-u96" secondAttribute="leading" id="ABj-4z-qPI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5ae-D9-fXU" secondAttribute="trailing" id="IN8-gu-G1o"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FRr-v3-u96" secondAttribute="trailing" id="Ljf-FX-gNh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FRr-v3-u96" secondAttribute="trailing" constant="250" id="Ljf-FX-gNh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EuL-qi-WA7" secondAttribute="trailing" id="SOv-lD-YCw"/>
                             <constraint firstItem="5ae-D9-fXU" firstAttribute="top" secondItem="3Xj-Kf-V6o" secondAttribute="bottom" constant="8" id="Tg1-Jq-KWo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jpo-NU-OGN" secondAttribute="trailing" id="UWq-Qo-cJS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jpo-NU-OGN" secondAttribute="trailing" constant="131" id="UWq-Qo-cJS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="BEl-u0-egC" secondAttribute="leading" id="Xmm-J4-6pI"/>
                             <constraint firstItem="Jpo-NU-OGN" firstAttribute="top" secondItem="FRr-v3-u96" secondAttribute="bottom" constant="8" id="cPX-KH-JxM"/>
                             <constraint firstItem="5ae-D9-fXU" firstAttribute="top" secondItem="mMP-Hr-Rbo" secondAttribute="bottom" constant="-40" id="dqx-uF-M9o"/>
@@ -275,6 +279,7 @@
                     <connections>
                         <outlet property="ui_imageViewNationTank" destination="mMP-Hr-Rbo" id="0rY-XJ-Pbt"/>
                         <outlet property="ui_imageViewTank" destination="5ae-D9-fXU" id="J41-I8-Vxv"/>
+                        <outlet property="ui_imageViewTypeTank" destination="hwv-Pq-SEq" id="Zbd-ug-SY9"/>
                         <outlet property="ui_labelNameTank" destination="EuL-qi-WA7" id="l7p-qg-ZnJ"/>
                         <outlet property="ui_labelTierTank" destination="Jpo-NU-OGN" id="04c-JY-T2g"/>
                         <outlet property="ui_labelTypeTank" destination="FRr-v3-u96" id="PZ8-VM-2e4"/>
@@ -283,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9D-mX-Wav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2202.898550724638" y="26.90217391304348"/>
+            <point key="canvasLocation" x="2202.4000000000001" y="26.53673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5mu-dp-0ZL">

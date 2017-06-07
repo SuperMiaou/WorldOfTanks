@@ -17,6 +17,9 @@ class TankTableViewCell: UITableViewCell {
     @IBOutlet weak var ui_imageViewNationTank: UIImageView!
     @IBOutlet weak var ui_labelNilTank: UILabel!
     
+    override func prepareForReuse() {
+        ui_imageViewTank.af_cancelImageRequest()
+    }
 }
 
 class TankTableViewController: UITableViewController {
