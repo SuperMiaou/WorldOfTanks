@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var ui_labelAlert: UILabel!
     @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
     
+    @IBOutlet weak var ui_viewContainer: UIView!
     
     let NICKNAME_PLAYER_KEY = "NICKNAME_PLAYER"
     let ACCOUNT_ID_KEY = "ACCOUNT_ID"
@@ -26,12 +27,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 20.0))
         view.backgroundColor = .orange
         self.view.addSubview(view)
-        
+
         ui_textPlayer.delegate = self
         ui_textPlayer.returnKeyType = .next
         

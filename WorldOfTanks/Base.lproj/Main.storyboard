@@ -23,23 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ET-8f-GQM">
-                                <rect key="frame" x="16" y="280" width="343" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="pGc-cO-Y4r">
-                                <rect key="frame" x="16" y="72" width="343" height="200"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom de Joueur" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nSO-kK-ZQ1">
-                                <rect key="frame" x="76" y="308" width="223" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBM-f8-Z8P">
-                                <rect key="frame" x="147" y="346" width="81" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBM-f8-Z8P">
+                                <rect key="frame" x="166" y="495" width="81" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="Valider">
@@ -49,28 +35,50 @@
                                     <action selector="_btn_validSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekR-Of-glQ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom du Joueur" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dR-tb-Ewd">
+                                <rect key="frame" x="166" y="462" width="135" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzV-is-uJM">
+                                <rect key="frame" x="16" y="289" width="343" height="203"/>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="pGc-cO-Y4r">
+                                <rect key="frame" x="16" y="81" width="343" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="p65-2k-WeE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  rtbtrt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ET-8f-GQM">
+                                <rect key="frame" x="60" y="313" width="254" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="37h-sl-V7b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="nSO-kK-ZQ1" secondAttribute="trailing" constant="60" id="7U0-ro-Wlh"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="0ET-8f-GQM" secondAttribute="leading" id="KYq-lu-GmB"/>
-                            <constraint firstItem="YBM-f8-Z8P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="131" id="NKT-Zl-MkG"/>
-                            <constraint firstItem="nSO-kK-ZQ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="NvF-id-t47"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YBM-f8-Z8P" secondAttribute="trailing" constant="131" id="PEw-FV-Yr6"/>
-                            <constraint firstItem="pGc-cO-Y4r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Vyj-BP-7cr"/>
-                            <constraint firstItem="YBM-f8-Z8P" firstAttribute="top" secondItem="nSO-kK-ZQ1" secondAttribute="bottom" constant="8" id="abl-1K-avv"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="pGc-cO-Y4r" secondAttribute="leading" id="bXg-RC-jOl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0ET-8f-GQM" secondAttribute="trailing" id="enx-Yv-11y"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pGc-cO-Y4r" secondAttribute="bottom" constant="395" id="mg5-VP-V5E"/>
-                            <constraint firstItem="0ET-8f-GQM" firstAttribute="top" secondItem="pGc-cO-Y4r" secondAttribute="bottom" constant="8" id="omH-3M-BPm"/>
-                            <constraint firstItem="nSO-kK-ZQ1" firstAttribute="top" secondItem="0ET-8f-GQM" secondAttribute="bottom" constant="7.5" id="qdc-xq-w4H"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pGc-cO-Y4r" secondAttribute="trailing" id="wLM-QK-iyF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qzV-is-uJM" secondAttribute="trailing" id="0Wx-v0-s1M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pGc-cO-Y4r" secondAttribute="trailing" id="4VE-bl-nfv"/>
+                            <constraint firstItem="qzV-is-uJM" firstAttribute="top" secondItem="pGc-cO-Y4r" secondAttribute="bottom" constant="8" id="8Aa-SO-ptk"/>
+                            <constraint firstItem="pGc-cO-Y4r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Gwv-so-qvy"/>
+                            <constraint firstItem="qzV-is-uJM" firstAttribute="top" secondItem="0ET-8f-GQM" secondAttribute="bottom" constant="-64" id="HEd-IZ-QiL"/>
+                            <constraint firstItem="qzV-is-uJM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Tig-8g-pPk"/>
+                            <constraint firstItem="qzV-is-uJM" firstAttribute="leading" secondItem="0ET-8f-GQM" secondAttribute="trailing" constant="-298" id="Web-Ng-P7E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qzV-is-uJM" secondAttribute="bottom" constant="175" id="dyz-Cw-beX"/>
+                            <constraint firstItem="pGc-cO-Y4r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="imC-ID-UJg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchDisplayController" destination="9pb-7O-aYe" id="HZj-az-Fnt"/>
                         <outlet property="ui_labelAlert" destination="0ET-8f-GQM" id="Y8R-NW-EPg"/>
-                        <outlet property="ui_textPlayer" destination="nSO-kK-ZQ1" id="1Rb-pm-kY7"/>
+                        <outlet property="ui_textPlayer" destination="3dR-tb-Ewd" id="lTp-z5-Qla"/>
+                        <outlet property="ui_viewContainer" destination="qzV-is-uJM" id="CGF-Pq-fhM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -83,7 +91,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-636" y="25.637181409295355"/>
+            <point key="canvasLocation" x="-637.60000000000002" y="24.7376311844078"/>
         </scene>
         <!--Liste de Tanks-->
         <scene sceneID="xNt-ah-0DG">
@@ -172,7 +180,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Retour" id="zcg-bd-1Ip">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="R6d-hO-Mm4"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="NeF-pM-py8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
