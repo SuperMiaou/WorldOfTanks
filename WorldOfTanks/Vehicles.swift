@@ -12,14 +12,14 @@ import ObjectMapper
 
 
 class Vehicles : Mappable {
-    var _name : String
-    var _description : String
-    var _tier : Int
-    var _type : String
-    var _image : String
-    var _nation: String
-    var _nbBatailles: Int
-    var _victoire: Int
+    private var _name : String
+    private var _description : String
+    private var _tier : Int
+    private var _type : String
+    private var _image : String
+    private var _nation: String
+    private var _battles: Int
+    private var _wins: Int
     
     required init?(map: Map) {
         _name = ""
@@ -28,8 +28,8 @@ class Vehicles : Mappable {
         _type = ""
         _image = ""
         _nation = ""
-        _nbBatailles = 0
-        _victoire = 0
+        _battles = 0
+        _wins = 0
     }
     
     func mapping(map: Map) {
@@ -39,8 +39,8 @@ class Vehicles : Mappable {
         _description <- map["description"]
         _type <- map ["type"]
         _tier <- map ["tier"]
-        _nbBatailles <- map ["nbBataille"]
-        _victoire <- map ["victoire"]
+        _battles <- map ["statistics.battles"]
+        _wins <- map ["statistics.wins"]
     }
     
     
@@ -92,30 +92,30 @@ class Vehicles : Mappable {
         }
     }
     
-    var nbBataille : Int {
+    var battles : Int {
         get {
-            return _nbBatailles
+            return _battles
         }set {
-            _nbBatailles = newValue
+            _battles = newValue
         }
     }
     
-    var victoire : Int {
+    var wins : Int {
         get {
-            return _victoire
+            return _wins
         }set {
-            _victoire = newValue
+            _wins = newValue
         }
     }
     
-    init(name: String, description: String, type: String, tier: Int, image: String, nation: String, nbBataille: Int, victoire: Int) {
+    init(name: String, description: String, type: String, tier: Int, image: String, nation: String, battles: Int, wins: Int) {
         _name = name
         _description = description
         _type = type
         _tier = tier
         _image = image
         _nation = nation
-        _nbBatailles = nbBataille
-        _victoire = victoire
+        _battles = battles
+        _wins = wins
     }
 }

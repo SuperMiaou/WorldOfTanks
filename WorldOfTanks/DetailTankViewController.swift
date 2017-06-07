@@ -26,63 +26,63 @@ class DetailTankViewController: UIViewController {
         super.viewDidLoad()
 
         
-        ui_labelNameTank.text = _currentVehicle!._name
-        ui_imageViewTank?.af_setImage(withURL: URL(string: _currentVehicle!._image)!)
-        ui_labelTierTank.text = String(_currentVehicle!._tier)
-        ui_textViewDescription.text = _currentVehicle!._description
+        ui_labelNameTank.text = _currentVehicle!.name
+        ui_imageViewTank?.af_setImage(withURL: URL(string: _currentVehicle!.image)!)
+        ui_labelTierTank.text = String(_currentVehicle!.tier)
+        ui_textViewDescription.text = _currentVehicle!.description
         
-        if (_currentVehicle!._tier == 1) {
-            ui_labelTierTank.text = "I"
-        } else if (_currentVehicle!._tier == 2) {
-            ui_labelTierTank.text = "II"
-        } else if (_currentVehicle!._tier == 3) {
-            ui_labelTierTank.text = "III"
-        } else if (_currentVehicle!._tier == 4) {
-            ui_labelTierTank.text = "IV"
-        } else if (_currentVehicle!._tier == 5) {
-            ui_labelTierTank.text = "V"
-        } else if (_currentVehicle!._tier == 6) {
-            ui_labelTierTank.text = "VI"
-        } else if (_currentVehicle!._tier == 7) {
-            ui_labelTierTank.text = "VII"
-        } else if (_currentVehicle!._tier == 8) {
-            ui_labelTierTank.text = "VIII"
-        } else if (_currentVehicle!._tier == 9) {
-            ui_labelTierTank.text = "IX"
-        } else if (_currentVehicle!._tier == 10) {
-            ui_labelTierTank.text = "X"
+        if (_currentVehicle!.tier == 1) {
+            ui_labelTierTank.text = "I Rang"
+        } else if (_currentVehicle!.tier == 2) {
+            ui_labelTierTank.text = "II Rang"
+        } else if (_currentVehicle!.tier == 3) {
+            ui_labelTierTank.text = "III Rang"
+        } else if (_currentVehicle!.tier == 4) {
+            ui_labelTierTank.text = "IV Rang"
+        } else if (_currentVehicle!.tier == 5) {
+            ui_labelTierTank.text = "V Rang"
+        } else if (_currentVehicle!.tier == 6) {
+            ui_labelTierTank.text = "VI Rang"
+        } else if (_currentVehicle!.tier == 7) {
+            ui_labelTierTank.text = "VII Rang"
+        } else if (_currentVehicle!.tier == 8) {
+            ui_labelTierTank.text = "VIII Rang"
+        } else if (_currentVehicle!.tier == 9) {
+            ui_labelTierTank.text = "IX Rang"
+        } else if (_currentVehicle!.tier == 10) {
+            ui_labelTierTank.text = "X Rang"
         }
         
-        if (_currentVehicle!._type == "lightTank") {
+        if (_currentVehicle!.type == "lightTank") {
             ui_labelTypeTank.text = "Char Leger"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "light")
-        } else if (_currentVehicle!._type == "mediumTank") {
+        } else if (_currentVehicle!.type == "mediumTank") {
             ui_labelTypeTank.text = "Char Moyen"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "medium")
-        } else if (_currentVehicle!._type == "heavyTank") {
+        } else if (_currentVehicle!.type == "heavyTank") {
             ui_labelTypeTank.text = "Char Lourd"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "heavy")
-        } else if (_currentVehicle!._type == "SPG") {
+        } else if (_currentVehicle!.type == "SPG") {
             ui_labelTypeTank.text = "Canon Automoteur"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "arty")
-        } else if (_currentVehicle!._type == "AT-SPG") {
+        } else if (_currentVehicle!.type == "AT-SPG") {
             ui_labelTypeTank.text = "Chasseur de chars"; ui_imageViewTypeTank.image = #imageLiteral(resourceName: "td")
         }
         
         
-        if (_currentVehicle!._nation == "france") {
+        if (_currentVehicle!.nation == "france") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "fra")
-        } else if (_currentVehicle!._nation == "usa") {
+        } else if (_currentVehicle!.nation == "usa") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "usa")
-        } else if (_currentVehicle!._nation == "germany") {
+        } else if (_currentVehicle!.nation == "germany") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "all")
-        } else if (_currentVehicle!._nation == "ussr") {
+        } else if (_currentVehicle!.nation == "ussr") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "urss")
-        } else if (_currentVehicle!._nation == "czech") {
+        } else if (_currentVehicle!.nation == "czech") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "czech")
-        } else if (_currentVehicle!._nation == "sweden") {
+        } else if (_currentVehicle!.nation == "sweden") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "sweden")
-        } else if (_currentVehicle!._nation == "japan") {
+        } else if (_currentVehicle!.nation == "japan") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "jap")
-        } else if (_currentVehicle!._nation == "uk") {
+        } else if (_currentVehicle!.nation == "uk") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "uk")
-        } else if (_currentVehicle!._nation == "china") {
+        } else if (_currentVehicle!.nation == "china") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "chine")
         }
         // Do any additional setup after loading the view.

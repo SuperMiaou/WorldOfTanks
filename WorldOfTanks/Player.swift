@@ -11,30 +11,18 @@ import UIKit
 import ObjectMapper
 
 class Player : Mappable {
-    
-    var _pseudo : String
     var _account_id : Int
-    var _tank_id : Int
+    var _data: [Data]
     
     required init?(map: Map) {
-        _pseudo = ""
         _account_id = 0
-        _tank_id = 0
+        _data = []
 
     }
     
     func mapping(map: Map) {
-        _pseudo <- map["nickname"]
         _account_id <- map["account_id"]
-        _tank_id <- map["tank_id"]
-    }
-    
-    var pseudo : String {
-        get {
-            return _pseudo
-        } set {
-            _pseudo = newValue
-        }
+        _data <- map["\(account_id)"]
     }
     
     var account_id : Int {
@@ -45,29 +33,16 @@ class Player : Mappable {
         }
     }
     
-    var tank_id : Int {
+    var data : [Data] {
         get {
-            return _tank_id
-        }set {
-            _tank_id = newValue
+            return _data
+        } set {
+            _data = newValue
         }
     }
     
-//    var tank_id : [Int] {
-//        get {
-//            if let tid = _tank_id {
-//                return tid
-//            }
-//        } set {
-//            _tank_id = newValue
-//        }
-//    }
-    
-    init(pseudo: String, account_id: Int, tank_id: Int) {
-        _pseudo = pseudo
+    init(account_id: Int, data: [Data]) {
         _account_id = account_id
-        _tank_id = tank_id
+        _data = data
     }
-    
-    
 }
