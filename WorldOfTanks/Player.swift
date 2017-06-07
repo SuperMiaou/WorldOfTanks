@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import ObjectMapper
 
-class Player {
+class Player: Mappable {
     
     var _pseudo : String
     var _account_id : Int
