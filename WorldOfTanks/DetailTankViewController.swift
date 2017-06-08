@@ -19,17 +19,26 @@ class DetailTankViewController: UIViewController {
     @IBOutlet weak var ui_labelTypeTank: UILabel!
     @IBOutlet weak var ui_labelTierTank: UILabel!
     @IBOutlet weak var ui_imageViewTypeTank: UIImageView!
+    @IBOutlet weak var ui_labelPourcentage: UILabel!
+    @IBOutlet weak var ui_labelNbBataille: UILabel!
+    
     
     var _currentVehicle:Vehicles?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         ui_labelNameTank.text = _currentVehicle!.name
         ui_imageViewTank?.af_setImage(withURL: URL(string: _currentVehicle!.image)!)
         ui_labelTierTank.text = String(_currentVehicle!.tier)
         ui_textViewDescription.text = _currentVehicle!.description
+        
+        if let nbBtaille = _currentVehicle?.battles {
+            ui_labelNbBataille.text = "Bataille(s) : \(nbBtaille)"
+        }
+        
+        let pourcentage = String((_currentVehicle?.wins)! * 100 / (_currentVehicle?.battles)!)
+            ui_labelPourcentage.text = "Victoire : \(pourcentage) %"
         
         if (_currentVehicle!.tier == 1) {
             ui_labelTierTank.text = "I Rang"
