@@ -19,6 +19,7 @@
 		B32D74CE1EDD5FCA00F988BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */; };
 		B32D74D91EDD5FCA00F988BA /* WorldOfTanksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74D81EDD5FCA00F988BA /* WorldOfTanksTests.swift */; };
 		B32D74E41EDD5FCA00F988BA /* WorldOfTanksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */; };
+		B336C8D31EEAE71600104A03 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336C8D21EEAE71600104A03 /* Reachability.swift */; };
 		B34EC5511EE1800000D30048 /* DetailTankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34EC5501EE1800000D30048 /* DetailTankViewController.swift */; };
 		B353408A1EE014C3007D33FC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35340891EE014C3007D33FC /* DataManager.swift */; };
 		B353408C1EE0159E007D33FC /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353408B1EE0159E007D33FC /* CacheManager.swift */; };
@@ -66,6 +67,7 @@
 		B32D74DF1EDD5FCA00F988BA /* WorldOfTanksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfTanksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfTanksUITests.swift; sourceTree = "<group>"; };
 		B32D74E51EDD5FCA00F988BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B336C8D21EEAE71600104A03 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B34EC5501EE1800000D30048 /* DetailTankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTankViewController.swift; sourceTree = "<group>"; };
 		B35340891EE014C3007D33FC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B353408B1EE0159E007D33FC /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				B35340891EE014C3007D33FC /* DataManager.swift */,
 				B353408B1EE0159E007D33FC /* CacheManager.swift */,
+				B336C8D21EEAE71600104A03 /* Reachability.swift */,
 			);
 			name = ModelManager;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				B30CB7441EDDACCD007735F6 /* Player.swift in Sources */,
 				B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */,
 				B3DF55011EE82B5E0056D6F8 /* TankStatistics.swift in Sources */,
+				B336C8D31EEAE71600104A03 /* Reachability.swift in Sources */,
 				B353408C1EE0159E007D33FC /* CacheManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

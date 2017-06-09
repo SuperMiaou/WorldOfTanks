@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EvilJoe" borderStyle="roundedRect" placeholder="Nom du Joueur" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dR-tb-Ewd">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Grecker" borderStyle="roundedRect" placeholder="Nom du Joueur" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dR-tb-Ewd">
                                 <rect key="frame" x="60" y="395" width="255" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
@@ -183,10 +183,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchDisplayController" destination="cMc-rZ-y7H" id="KKT-tM-6Ql"/>
                         <outlet property="ui_tableView" destination="XaA-OQ-qKS" id="MAI-NG-HKm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dH-Fz-1mO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="cMc-rZ-y7H">
+                    <connections>
+                        <outlet property="delegate" destination="SbW-gu-6of" id="17S-mL-A2W"/>
+                        <outlet property="searchContentsController" destination="SbW-gu-6of" id="4Zh-Vk-4PG"/>
+                        <outlet property="searchResultsDataSource" destination="SbW-gu-6of" id="faf-LZ-NG8"/>
+                        <outlet property="searchResultsDelegate" destination="SbW-gu-6of" id="Bzc-jr-uNx"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1245.5999999999999" y="26.53673163418291"/>
         </scene>
