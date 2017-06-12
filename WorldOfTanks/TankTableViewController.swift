@@ -22,10 +22,10 @@ class TankTableViewCell: UITableViewCell {
         super.prepareForReuse()
         
         ui_imageViewTank.af_cancelImageRequest()
-//        ui_imageViewTank.image = nil
-//        ui_labelNameTank.text = ""
-//        ui_imageViewNationTank.image = nil
-    
+        //        ui_imageViewTank.image = nil
+        //        ui_labelNameTank.text = ""
+        //        ui_imageViewNationTank.image = nil
+        
     }
 }
 
@@ -55,11 +55,12 @@ class TankTableViewController: UITableViewController {
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
         definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
         
         // Setup the Scope Bar
-        //searchController.searchBar.scopeButtonTitles = ["All", "lightTank", "mediumTank", "Lourd", "Chasseur", "Arty"]
+        
+        searchController.searchBar.scopeButtonTitles = ["All", "lightTank", "mediumTank", "heavyTank", "AT-SPG", "SPG"]
         tableView.tableHeaderView = searchController.searchBar
         
         ui_tableView.dataSource = self
@@ -76,77 +77,8 @@ class TankTableViewController: UITableViewController {
             self._tankList = tankList
             self.tableView.reloadData()
             
-            //            let json = JSON(value)
-            //            if let tankId = json["data"][String(account_id)][0]["tank_id"].int {
-            //                self._tankId = tankId
-            //            } else {
-            //                self._tankId = 0
-            //            }
-            //            self.detailsTank()
         }
-        
-        //        Alamofire.request("https://api.worldoftanks.eu/wot/account/tanks/?application_id=demo&account_id=\(account_id)").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
-        //            switch response.result {
-        //            case .success(let value):
-        //                let json = JSON(value)
-        //                if let tankId = json["data"][String(account_id)][0]["tank_id"].int {
-        //                    self._tankId = tankId
-        //                } else {
-        //                    self._tankId = 0
-        //                }
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        })
     }
-    
-    //  EXECUTER LA DEUXIEME FONCTION ASYNCHRONE
-    
-    //    func detailsTank () {
-    //        Alamofire.request("https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=demo&tank_id=\(self._tankId)&language=fr").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
-    //            switch response.result {
-    //            case .success(let value):
-    //                let json = JSON(value)
-    //                if let nameTank = json["data"][String(self._tankId)]["name"].string {
-    //                    self._nameTank = nameTank
-    //                } else {
-    //                    self._nameTank = ""
-    //                }
-    //                if let imageTank = json["data"][String(self._tankId)]["images"]["small_icon"].string {
-    //
-    //                    self._imageTank = imageTank
-    //                } else {
-    //                    self._imageTank = ""
-    //                }
-    //                if let typeTank = json["data"][String(self._tankId)]["type"].string {
-    //                    self._typeTank = typeTank
-    //                } else {
-    //                    self._typeTank = ""
-    //                }
-    //                if let descriptionTank = json["data"][String(self._tankId)]["description"].string {
-    //                    self._descriptionTank = descriptionTank
-    //                } else {
-    //                    self._descriptionTank = ""
-    //                }
-    //                if let nationTank = json["data"][String(self._tankId)]["nation"].string {
-    //                    self._nationTank = nationTank
-    //                } else {
-    //                    self._nationTank = ""
-    //                }
-    //                if let tierTank = json["data"][String(self._tankId)]["tier"].int {
-    //                    self._tierTank = tierTank
-    //                } else {
-    //                    self._tierTank = 0
-    //                }
-    //                self.ui_tableView.reloadData()
-    //
-    //            case .failure(let error):
-    //                print(error)
-    //            }
-    //        })
-    //    }
-    
-    
     // MARK: - Table View
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -172,7 +104,7 @@ class TankTableViewController: UITableViewController {
         if _tankList.count != 0 {
             if searchController.isActive && searchController.searchBar.text != "" {
                 tank = filteredTanks[indexPath.row]
-
+                
             } else {
                 tank = self._tankList[indexPath.row]
             }
@@ -225,7 +157,7 @@ class TankTableViewController: UITableViewController {
     
     func filterContentForSearchText(_ searchText: String, scope: String = "Tous") {
         filteredTanks = _tankList.filter({( tank : Vehicles) -> Bool in
-            let categoryMatch = (scope == "Tous") || (tank.type == scope)
+            let categoryMatch = (scope == "All") || (tank.type == scope)
             return categoryMatch && tank.name.lowercased().contains(searchText.lowercased())
         })
         tableView.reloadData()
@@ -245,7 +177,7 @@ class TankTableViewController: UITableViewController {
             nextScene._currentVehicle = selectedVehicle
         }
     }
-        
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -263,8 +195,8 @@ extension TankTableViewController: UISearchBarDelegate {
 extension TankTableViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
-        //let searchBar = searchController.searchBar
-        //let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
-        filterContentForSearchText(searchController.searchBar.text!)
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
     }
 }

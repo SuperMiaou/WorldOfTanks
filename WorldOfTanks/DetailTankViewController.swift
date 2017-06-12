@@ -11,7 +11,7 @@ import AlamofireImage
 
 
 class DetailTankViewController: UIViewController {
-
+    
     @IBOutlet weak var ui_textViewDescription: UITextView!
     @IBOutlet weak var ui_labelNameTank: UILabel!
     @IBOutlet weak var ui_imageViewTank: UIImageView!
@@ -27,7 +27,7 @@ class DetailTankViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         ui_labelNameTank.text = _currentVehicle!.name
         ui_imageViewTank?.af_setImage(withURL: URL(string: _currentVehicle!.image)!)
         ui_labelTierTank.text = String(_currentVehicle!.tier)
@@ -38,7 +38,7 @@ class DetailTankViewController: UIViewController {
         }
         
         let pourcentage = String((_currentVehicle?.wins)! * 100 / (_currentVehicle?.battles)!)
-            ui_labelPourcentage.text = "Victoire : \(pourcentage) %"
+        ui_labelPourcentage.text = "Victoire : \(pourcentage) %"
         
         if (_currentVehicle!.tier == 1) {
             ui_labelTierTank.text = "I Rang"
@@ -96,21 +96,21 @@ class DetailTankViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
