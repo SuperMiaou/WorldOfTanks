@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		255C3287B10E109BA387FC98 /* Pods_WorldOfTanks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B00A78A0342A45CA083A13 /* Pods_WorldOfTanks.framework */; };
 		34920D507D84E3A72F58F26F /* Pods_WorldOfTanksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E299159E1F5E0C3746462A /* Pods_WorldOfTanksUITests.framework */; };
+		AB8C01C11EEED4B4003ADE29 /* musicIntro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB8C01C01EEED4B4003ADE29 /* musicIntro.mp3 */; };
+		AB8C01C31EEEDA5D003ADE29 /* TankFire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB8C01C21EEEDA5D003ADE29 /* TankFire.mp3 */; };
 		B30CB7441EDDACCD007735F6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7431EDDACCD007735F6 /* Player.swift */; };
 		B30CB7461EDDAD2F007735F6 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7451EDDAD2F007735F6 /* Vehicles.swift */; };
 		B30CB7481EDDB44D007735F6 /* TankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */; };
@@ -53,6 +55,8 @@
 		4E1E778374C22B28030096FE /* Pods_WorldOfTanksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfTanksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE3CDCC00092A3D5735076B /* Pods-WorldOfTanks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanks/Pods-WorldOfTanks.debug.xcconfig"; sourceTree = "<group>"; };
 		9709A3855401DFBBB938BD99 /* Pods-WorldOfTanks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanks.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanks/Pods-WorldOfTanks.release.xcconfig"; sourceTree = "<group>"; };
+		AB8C01C01EEED4B4003ADE29 /* musicIntro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicIntro.mp3; sourceTree = "<group>"; };
+		AB8C01C21EEEDA5D003ADE29 /* TankFire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TankFire.mp3; sourceTree = "<group>"; };
 		B30CB7431EDDACCD007735F6 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B30CB7451EDDAD2F007735F6 /* Vehicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TankTableViewController.swift; sourceTree = "<group>"; };
