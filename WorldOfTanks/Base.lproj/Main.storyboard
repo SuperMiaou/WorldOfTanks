@@ -23,6 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wall3" translatesAutoresizingMaskIntoConstraints="NO" id="N95-bP-pcR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Grecker" borderStyle="roundedRect" placeholder="Nom du Joueur" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dR-tb-Ewd">
                                 <rect key="frame" x="60" y="395" width="255" height="30"/>
                                 <nil key="textColor"/>
@@ -65,9 +68,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="YBM-f8-Z8P" secondAttribute="trailing" constant="131" id="Fym-DC-pJ5"/>
                             <constraint firstItem="pGc-cO-Y4r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Gwv-so-qvy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0ET-8f-GQM" secondAttribute="trailing" constant="44" id="HE9-Mh-1kv"/>
+                            <constraint firstItem="N95-bP-pcR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Q0U-Zl-bRZ"/>
                             <constraint firstItem="0ET-8f-GQM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="YuZ-OO-fpT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N95-bP-pcR" secondAttribute="bottom" id="ZkH-5N-UgC"/>
                             <constraint firstItem="YBM-f8-Z8P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="131" id="eW7-OV-D9I"/>
                             <constraint firstItem="pGc-cO-Y4r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="imC-ID-UJg"/>
+                            <constraint firstAttribute="trailing" secondItem="N95-bP-pcR" secondAttribute="trailing" id="rqL-9h-vtq"/>
+                            <constraint firstItem="N95-bP-pcR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="szt-We-nsr"/>
                             <constraint firstItem="3dR-tb-Ewd" firstAttribute="top" secondItem="0ET-8f-GQM" secondAttribute="bottom" constant="37" id="vuO-Bw-QyS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3dR-tb-Ewd" secondAttribute="trailing" constant="44" id="yUx-31-5UT"/>
                             <constraint firstItem="0ET-8f-GQM" firstAttribute="top" secondItem="pGc-cO-Y4r" secondAttribute="bottom" constant="32" id="ycL-BP-YRT"/>
@@ -355,5 +362,6 @@
     </scenes>
     <resources>
         <image name="logo" width="371" height="512"/>
+        <image name="wall3" width="288" height="512"/>
     </resources>
 </document>
