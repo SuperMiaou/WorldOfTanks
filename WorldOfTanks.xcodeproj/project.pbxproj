@@ -279,7 +279,6 @@
 				TargetAttributes = {
 					B32D74BF1EDD5FC900F988BA = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 6DZR4K469V;
 						ProvisioningStyle = Automatic;
 					};
 					B32D74D31EDD5FCA00F988BA = {
@@ -647,7 +646,7 @@
 			baseConfigurationReference = 5DE3CDCC00092A3D5735076B /* Pods-WorldOfTanks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6DZR4K469V;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WorldOfTanks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ElppaGAMES.WorldOfTanks;
@@ -661,7 +660,7 @@
 			baseConfigurationReference = 9709A3855401DFBBB938BD99 /* Pods-WorldOfTanks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6DZR4K469V;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WorldOfTanks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ElppaGAMES.WorldOfTanks;
