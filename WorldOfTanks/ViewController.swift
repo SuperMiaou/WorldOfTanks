@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import AVFoundation
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
@@ -29,6 +30,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playBackgroundMusic(filename: "musicIntro.mp3")
         
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 20.0))
         view.backgroundColor = .orange
@@ -157,6 +160,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 print(error)
             }
         })
+    }
+    
+    
+    var backgroundMusicPlayer = AVAudioPlayer()
+    
+    func playBackgroundMusic(filename: String) {
+        let url = Bundle.main.url(forResource: filename, withExtension: nil)
+        guard let newURL = url else {
+            print("Could not find file: \(filename)")
+            return
+        }
+        do {
+            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
+            backgroundMusicPlayer.numberOfLoops = -1
+            backgroundMusicPlayer.prepareToPlay()
+            backgroundMusicPlayer.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
     }
     
     override func didReceiveMemoryWarning() {
