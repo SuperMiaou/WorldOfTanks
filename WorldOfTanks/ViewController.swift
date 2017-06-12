@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playBackgroundMusic(filename: "musicIntro.mp3")
+ //       playBackgroundMusic(filename: "musicIntro.mp3")
         
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 20.0))
         view.backgroundColor = .orange
@@ -112,6 +112,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func searchPlayer () {
+        
+        playFireSound(filename: "TankFire.mp3")
         let pseudo: String = ui_textPlayer.text!
         Alamofire.request("https://api.worldoftanks.eu/wot/account/list/?application_id=8a0dbb9d6c9d3dd47f9311e8d3f10968&search=\(pseudo)&type=exact").validate().responseJSON(completionHandler: { (response:DataResponse<Any>) in
             var _accountId:Int
@@ -163,19 +165,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    var backgroundMusicPlayer = AVAudioPlayer()
+//    var backgroundMusicPlayer = AVAudioPlayer()
+//    
+//    func playBackgroundMusic(filename: String) {
+//        let url = Bundle.main.url(forResource: filename, withExtension: nil)
+//        guard let newURL = url else {
+//            print("Could not find file: \(filename)")
+//            return
+//        }
+//        do {
+//            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
+//            backgroundMusicPlayer.numberOfLoops = -1
+//            backgroundMusicPlayer.prepareToPlay()
+//            backgroundMusicPlayer.play()
+//        } catch let error as NSError {
+//            print(error.description)
+//        }
+//    }
+    var playFireSound = AVAudioPlayer()
     
-    func playBackgroundMusic(filename: String) {
+    func playFireSound(filename: String) {
         let url = Bundle.main.url(forResource: filename, withExtension: nil)
         guard let newURL = url else {
             print("Could not find file: \(filename)")
             return
         }
         do {
-            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
-            backgroundMusicPlayer.numberOfLoops = -1
-            backgroundMusicPlayer.prepareToPlay()
-            backgroundMusicPlayer.play()
+            playFireSound = try AVAudioPlayer(contentsOf: newURL)
+            playFireSound.numberOfLoops = 0
+            playFireSound.prepareToPlay()
+            playFireSound.play()
         } catch let error as NSError {
             print(error.description)
         }
