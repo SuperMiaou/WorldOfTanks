@@ -183,7 +183,7 @@
                         <barButtonItem key="backBarButtonItem" title="Retour" id="0pW-uW-NMa">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="zcg-bd-1Ip">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="zcg-bd-1Ip">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="NeF-pM-py8"/>
@@ -205,7 +205,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1245.5999999999999" y="26.53673163418291"/>
+            <point key="canvasLocation" x="994" y="18"/>
         </scene>
         <!--Detail Tank View Controller-->
         <scene sceneID="jgz-dS-EeE">
@@ -336,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9D-mX-Wav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2200.8000000000002" y="25.637181409295355"/>
+            <point key="canvasLocation" x="1702" y="25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5mu-dp-0ZL">
@@ -357,7 +357,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vmp-kG-gEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="26"/>
+            <point key="canvasLocation" x="231" y="25"/>
         </scene>
     </scenes>
     <resources>

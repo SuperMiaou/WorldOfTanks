@@ -51,7 +51,13 @@ class TankTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+//        let button = UIButton.init(type: .custom)
+//        button.setImage(UIImage.init(named: "icon_button_back2.png"), for: UIControlState.normal)
+//        button.addTarget(self, action: #selector(TankTableViewController.backView), for: UIControlEvents.touchUpInside)
+//        button.frame = CGRect.init(x: 0, y: 0, width: 35, height: 35) //CGRectMake(0, 0, 30, 30)
+//        let barButton = UIBarButtonItem.init(customView: button)
+//        self.navigationItem.leftBarButtonItem = barButton
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
@@ -67,6 +73,10 @@ class TankTableViewController: UITableViewController {
         
         searchTanks()
         
+    }
+    
+    func backView() {
+        //self.navigationController?.popViewController(ViewController, animated:true);
     }
     
     func searchTanks () {
