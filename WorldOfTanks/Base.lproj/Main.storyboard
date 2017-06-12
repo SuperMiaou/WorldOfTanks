@@ -75,6 +75,7 @@
                     </view>
                     <connections>
                         <outlet property="searchDisplayController" destination="9pb-7O-aYe" id="HZj-az-Fnt"/>
+                        <outlet property="ui_buttonSearchPlayer" destination="YBM-f8-Z8P" id="Q47-La-aoZ"/>
                         <outlet property="ui_labelAlert" destination="0ET-8f-GQM" id="Y8R-NW-EPg"/>
                         <outlet property="ui_textPlayer" destination="3dR-tb-Ewd" id="lTp-z5-Qla"/>
                     </connections>
@@ -253,7 +254,7 @@
                                     <constraint firstAttribute="width" constant="160" id="2Vn-3s-Wjy"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEl-u0-egC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="BEl-u0-egC">
                                 <rect key="frame" x="16" y="374" width="343" height="224"/>
                                 <color key="backgroundColor" red="0.25756026329999998" green="0.25756026329999998" blue="0.25756026329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -12,6 +12,7 @@
 		B30CB7441EDDACCD007735F6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7431EDDACCD007735F6 /* Player.swift */; };
 		B30CB7461EDDAD2F007735F6 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7451EDDAD2F007735F6 /* Vehicles.swift */; };
 		B30CB7481EDDB44D007735F6 /* TankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */; };
+		B32AB8B31EEE893200F7CC47 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AB8B21EEE893200F7CC47 /* Reachability.swift */; };
 		B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C31EDD5FC900F988BA /* AppDelegate.swift */; };
 		B32D74C61EDD5FCA00F988BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C51EDD5FCA00F988BA /* ViewController.swift */; };
 		B32D74C91EDD5FCA00F988BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74C71EDD5FCA00F988BA /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		B32D74CE1EDD5FCA00F988BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */; };
 		B32D74D91EDD5FCA00F988BA /* WorldOfTanksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74D81EDD5FCA00F988BA /* WorldOfTanksTests.swift */; };
 		B32D74E41EDD5FCA00F988BA /* WorldOfTanksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */; };
-		B336C8D31EEAE71600104A03 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336C8D21EEAE71600104A03 /* Reachability.swift */; };
 		B34EC5511EE1800000D30048 /* DetailTankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34EC5501EE1800000D30048 /* DetailTankViewController.swift */; };
 		B353408A1EE014C3007D33FC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35340891EE014C3007D33FC /* DataManager.swift */; };
 		B353408C1EE0159E007D33FC /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353408B1EE0159E007D33FC /* CacheManager.swift */; };
@@ -54,6 +54,7 @@
 		B30CB7431EDDACCD007735F6 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B30CB7451EDDAD2F007735F6 /* Vehicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TankTableViewController.swift; sourceTree = "<group>"; };
+		B32AB8B21EEE893200F7CC47 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B32D74C01EDD5FC900F988BA /* WorldOfTanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfTanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D74C31EDD5FC900F988BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32D74C51EDD5FCA00F988BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		B32D74DF1EDD5FCA00F988BA /* WorldOfTanksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfTanksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D74E31EDD5FCA00F988BA /* WorldOfTanksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfTanksUITests.swift; sourceTree = "<group>"; };
 		B32D74E51EDD5FCA00F988BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B336C8D21EEAE71600104A03 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B34EC5501EE1800000D30048 /* DetailTankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTankViewController.swift; sourceTree = "<group>"; };
 		B35340891EE014C3007D33FC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B353408B1EE0159E007D33FC /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
@@ -188,9 +188,9 @@
 		B35340881EE014A2007D33FC /* ModelManager */ = {
 			isa = PBXGroup;
 			children = (
+				B32AB8B21EEE893200F7CC47 /* Reachability.swift */,
 				B35340891EE014C3007D33FC /* DataManager.swift */,
 				B353408B1EE0159E007D33FC /* CacheManager.swift */,
-				B336C8D21EEAE71600104A03 /* Reachability.swift */,
 			);
 			name = ModelManager;
 			sourceTree = "<group>";
@@ -495,7 +495,7 @@
 				B30CB7441EDDACCD007735F6 /* Player.swift in Sources */,
 				B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */,
 				B3DF55011EE82B5E0056D6F8 /* TankStatistics.swift in Sources */,
-				B336C8D31EEAE71600104A03 /* Reachability.swift in Sources */,
+				B32AB8B31EEE893200F7CC47 /* Reachability.swift in Sources */,
 				B353408C1EE0159E007D33FC /* CacheManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

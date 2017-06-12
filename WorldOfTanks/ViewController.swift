@@ -13,12 +13,15 @@ import SwiftyJSON
 class ViewController: UIViewController, UITextFieldDelegate {
     
     
+    @IBOutlet weak var ui_buttonSearchPlayer: UIButton!
     @IBOutlet weak var ui_tableViewPlayer: UITableView!
     @IBOutlet weak var ui_textPlayer: UITextField!
     @IBOutlet weak var ui_labelAlert: UILabel!
     @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
     
     @IBOutlet weak var ui_viewContainer: UIView!
+    
+    let reachability = Reachability()
     
     let NICKNAME_PLAYER_KEY = "NICKNAME_PLAYER"
     let ACCOUNT_ID_KEY = "ACCOUNT_ID"
@@ -37,12 +40,43 @@ class ViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged),name: ReachabilityChangedNotification,object: reachability)
+        do{
+            try reachability?.startNotifier()
+        }catch{
+            print("could not start reachability notifier")
+        }
+        
+        
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             textField.resignFirstResponder()
             self._btn_validSearch(self)
             return false
             
             // Do any additional setup after loading the view, typically from a nib.
+        }
+        
+    }
+    
+    func reachabilityChanged(note: NSNotification) {
+        
+        let reachability = note.object as! Reachability
+        
+        if reachability.isReachable {
+            if reachability.isReachableViaWiFi {
+                print("Reachable via WiFi")
+                ui_buttonSearchPlayer.isEnabled = true
+
+            } else {
+                print("Reachable via Cellular")
+                ui_buttonSearchPlayer.isEnabled = true
+
+            }
+        } else {
+            let alert = UIAlertController(title: "Connexion requise", message: "Une connexion à internet est requise. Veuillez vérifier votre connexion", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            ui_buttonSearchPlayer.isEnabled = false
         }
     }
     
