@@ -27,12 +27,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let NICKNAME_PLAYER_KEY = "NICKNAME_PLAYER"
     let ACCOUNT_ID_KEY = "ACCOUNT_ID"
     
+    var playFireSound = AVAudioPlayer()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playBackgroundMusic(filename: "musicIntro.mp3")
-
+        ui_buttonSearchPlayer.isEnabled = true
         
         //        let button = UIButton.init(type: .custom)
         //        button.setImage(UIImage.init(named: "icon_button_back2.png"), for: UIControlState.normal)
@@ -66,6 +67,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             // Do any additional setup after loading the view, typically from a nib.
         }
+        
+        //let playmusic = PlayMusic()
+        playBackgroundMusic(filename: "musicIntro.mp3")
         
     }
     
@@ -113,7 +117,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
     @IBAction func _btn_validSearch(_ sender: Any) {
         searchPlayer()
         
@@ -126,6 +129,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func searchPlayer () {
+        ui_buttonSearchPlayer.isEnabled = false
         
         playFireSound(filename: "TankFire.mp3")
         let pseudo: String = ui_textPlayer.text!
@@ -177,26 +181,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
-    
-        var backgroundMusicPlayer = AVAudioPlayer()
-    
-        func playBackgroundMusic(filename: String) {
-            let url = Bundle.main.url(forResource: filename, withExtension: nil)
-            guard let newURL = url else {
-                print("Could not find file: \(filename)")
-                return
-            }
-            do {
-                backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
-                backgroundMusicPlayer.numberOfLoops = -1
-                backgroundMusicPlayer.prepareToPlay()
-                backgroundMusicPlayer.play()
-            } catch let error as NSError {
-                print(error.description)
-            }
-        }
-    var playFireSound = AVAudioPlayer()
-    
     func playFireSound(filename: String) {
         let url = Bundle.main.url(forResource: filename, withExtension: nil)
         guard let newURL = url else {
@@ -208,6 +192,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
             playFireSound.numberOfLoops = 0
             playFireSound.prepareToPlay()
             playFireSound.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+    
+    var backgroundMusicPlayer = AVAudioPlayer()
+    
+    func playBackgroundMusic(filename: String) {
+        let url = Bundle.main.url(forResource: filename, withExtension: nil)
+        guard let newURL = url else {
+            print("Could not find file: \(filename)")
+            return
+        }
+        do {
+            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
+            backgroundMusicPlayer.numberOfLoops = -1
+            backgroundMusicPlayer.prepareToPlay()
+            backgroundMusicPlayer.play()
         } catch let error as NSError {
             print(error.description)
         }

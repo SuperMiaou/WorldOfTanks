@@ -179,12 +179,17 @@
                             <outlet property="delegate" destination="SbW-gu-6of" id="WfY-IO-6s9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Liste des tanks du joueur" id="I98-cI-0Ya">
+                    <navigationItem key="navigationItem" title="Liste des chars du joueur" id="I98-cI-0Ya">
                         <barButtonItem key="backBarButtonItem" title=" " id="XAi-rL-Nna"/>
                         <barButtonItem key="leftBarButtonItem" image="icon_button_back.png" id="zcg-bd-1Ip">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="NeF-pM-py8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="h84-Ba-jtf">
+                            <connections>
+                                <action selector="stopMusic:" destination="SbW-gu-6of" id="YHR-W8-MC7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -205,7 +210,7 @@
             </objects>
             <point key="canvasLocation" x="994" y="18"/>
         </scene>
-        <!--Detail Tank View Controller-->
+        <!--Title-->
         <scene sceneID="jgz-dS-EeE">
             <objects>
                 <viewController id="7ZU-Us-Y3W" customClass="DetailTankViewController" customModule="WorldOfTanks" customModuleProvider="target" sceneMemberID="viewController">
@@ -344,6 +349,13 @@
                             <constraint firstAttribute="leadingMargin" secondItem="EuL-qi-WA7" secondAttribute="leading" id="yxS-YP-3Hp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="dWp-5f-oGw">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-Domaine-30.png" id="zNh-HY-sT8">
+                            <connections>
+                                <action selector="openWebSite:" destination="7ZU-Us-Y3W" id="Cen-FQ-9HB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ui_imageViewNationTank" destination="mMP-Hr-Rbo" id="0rY-XJ-Pbt"/>
                         <outlet property="ui_imageViewPrice" destination="MYw-EC-HWs" id="ToG-ZP-G5L"/>
@@ -387,6 +399,7 @@
     </scenes>
     <resources>
         <image name="icon_button_back.png" width="30" height="30"/>
+        <image name="icons8-Domaine-30.png" width="30" height="30"/>
         <image name="logo" width="371" height="512"/>
         <image name="wall3" width="288" height="512"/>
     </resources>

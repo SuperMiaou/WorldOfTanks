@@ -29,6 +29,8 @@
 		B3674C241EEFD98E006353C1 /* icon_button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B3674C231EEFD98E006353C1 /* icon_button_back.png */; };
 		B3674C261EEFE97C006353C1 /* icons8-Gauche-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B3674C251EEFE97C006353C1 /* icons8-Gauche-50.png */; };
 		B3DF55011EE82B5E0056D6F8 /* TankStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF55001EE82B5E0056D6F8 /* TankStatistics.swift */; };
+		B3DF79771EF01951000109BE /* PlayMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF79761EF01951000109BE /* PlayMusic.swift */; };
+		B3DF79791EF02879000109BE /* icons8-Domaine-30.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DF79781EF02879000109BE /* icons8-Domaine-30.png */; };
 		BF83BB669CC7717229DD9570 /* Pods_WorldOfTanksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1E778374C22B28030096FE /* Pods_WorldOfTanksTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		B3674C231EEFD98E006353C1 /* icon_button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_button_back.png; sourceTree = "<group>"; };
 		B3674C251EEFE97C006353C1 /* icons8-Gauche-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Gauche-50.png"; sourceTree = "<group>"; };
 		B3DF55001EE82B5E0056D6F8 /* TankStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TankStatistics.swift; sourceTree = "<group>"; };
+		B3DF79761EF01951000109BE /* PlayMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayMusic.swift; sourceTree = "<group>"; };
+		B3DF79781EF02879000109BE /* icons8-Domaine-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Domaine-30.png"; sourceTree = "<group>"; };
 		BDC1B3555553BB0E06741F2D /* Pods-WorldOfTanksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanksUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanksUITests/Pods-WorldOfTanksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D811055633F3B3D4A7D90E58 /* Pods-WorldOfTanksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfTanksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfTanksTests/Pods-WorldOfTanksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6B00A78A0342A45CA083A13 /* Pods_WorldOfTanks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfTanks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,7 @@
 		B32AB8BB1EEED54500F7CC47 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				B3DF79781EF02879000109BE /* icons8-Domaine-30.png */,
 				B3674C251EEFE97C006353C1 /* icons8-Gauche-50.png */,
 				B3674C231EEFD98E006353C1 /* icon_button_back.png */,
 				B32AB8C21EEEDA0D00F7CC47 /* icon_button_back2.png */,
@@ -232,6 +237,7 @@
 			children = (
 				B3674C1D1EEFCAE2006353C1 /* musicIntro.mp3 */,
 				B3674C1B1EEFCAC3006353C1 /* TankFire.mp3 */,
+				B3DF79761EF01951000109BE /* PlayMusic.swift */,
 			);
 			name = Sound;
 			sourceTree = "<group>";
@@ -315,6 +321,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 6DZR4K469V;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					B32D74D31EDD5FCA00F988BA = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -361,6 +372,7 @@
 				B3674C1C1EEFCAC3006353C1 /* TankFire.mp3 in Resources */,
 				B3674C1E1EEFCAE2006353C1 /* musicIntro.mp3 in Resources */,
 				B3674C261EEFE97C006353C1 /* icons8-Gauche-50.png in Resources */,
+				B3DF79791EF02879000109BE /* icons8-Domaine-30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +545,7 @@
 				B3DF55011EE82B5E0056D6F8 /* TankStatistics.swift in Sources */,
 				B32AB8B31EEE893200F7CC47 /* Reachability.swift in Sources */,
 				B353408C1EE0159E007D33FC /* CacheManager.swift in Sources */,
+				B3DF79771EF01951000109BE /* PlayMusic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

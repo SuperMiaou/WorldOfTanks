@@ -195,6 +195,10 @@ class TankTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func stopMusic(_ sender: Any) {
+        //let playmusic = ViewController()
+        //playmusic.backgroundMusicPlayer.play()
+    }
 }
 
 extension TankTableViewController: UISearchBarDelegate {

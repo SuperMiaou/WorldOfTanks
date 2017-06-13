@@ -107,6 +107,17 @@ class DetailTankViewController: UIViewController {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "chine")
         }
         // Do any additional setup after loading the view.
+        
+    }
+    @IBAction func openWebSite(_ sender: Any) {
+        if let tank = _currentVehicle {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(URL(string: "https://worldoftanks.eu/fr/tankopedia/\(tank.tag)")! as URL)
+            } else {
+                UIApplication.shared.openURL(URL(string: "https://worldoftanks.eu/fr/tankopedia/\(tank.tag)")! as URL)
+
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
