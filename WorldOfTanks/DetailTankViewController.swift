@@ -22,6 +22,7 @@ class DetailTankViewController: UIViewController {
     @IBOutlet weak var ui_labelPourcentage: UILabel!
     @IBOutlet weak var ui_labelNbBataille: UILabel!
     @IBOutlet weak var ui_label_price_credit: UILabel!
+    @IBOutlet weak var ui_imageViewPrice: UIImageView!
     
     
     var _currentVehicle:Vehicles?
@@ -39,6 +40,7 @@ class DetailTankViewController: UIViewController {
             ui_label_price_credit.textColor = UIColor.orange
             ui_label_price_credit.text = "Char Premium"
         } else {
+            ui_imageViewPrice.image = #imageLiteral(resourceName: "credits")
             ui_label_price_credit.text = String(_currentVehicle!.price_credit)
         }
         

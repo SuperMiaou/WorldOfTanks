@@ -31,6 +31,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        playBackgroundMusic(filename: "musicIntro.mp3")
+
+        
         //        let button = UIButton.init(type: .custom)
         //        button.setImage(UIImage.init(named: "icon_button_back2.png"), for: UIControlState.normal)
         //        button.addTarget(self, action: #selector(ViewController.backView), for: UIControlEvents.touchUpInside)
@@ -175,23 +178,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    //    var backgroundMusicPlayer = AVAudioPlayer()
-    //
-    //    func playBackgroundMusic(filename: String) {
-    //        let url = Bundle.main.url(forResource: filename, withExtension: nil)
-    //        guard let newURL = url else {
-    //            print("Could not find file: \(filename)")
-    //            return
-    //        }
-    //        do {
-    //            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
-    //            backgroundMusicPlayer.numberOfLoops = -1
-    //            backgroundMusicPlayer.prepareToPlay()
-    //            backgroundMusicPlayer.play()
-    //        } catch let error as NSError {
-    //            print(error.description)
-    //        }
-    //    }
+        var backgroundMusicPlayer = AVAudioPlayer()
+    
+        func playBackgroundMusic(filename: String) {
+            let url = Bundle.main.url(forResource: filename, withExtension: nil)
+            guard let newURL = url else {
+                print("Could not find file: \(filename)")
+                return
+            }
+            do {
+                backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
+                backgroundMusicPlayer.numberOfLoops = -1
+                backgroundMusicPlayer.prepareToPlay()
+                backgroundMusicPlayer.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        }
     var playFireSound = AVAudioPlayer()
     
     func playFireSound(filename: String) {
