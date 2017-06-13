@@ -37,6 +37,7 @@ class DetailTankViewController: UIViewController {
         ui_textViewDescription.text = _currentVehicle!.description
         
         if (_currentVehicle?.price_credit == 0 && _currentVehicle?.tier != 1) {
+            ui_imageViewPrice.image = #imageLiteral(resourceName: "premium")
             ui_label_price_credit.textColor = UIColor.orange
             ui_label_price_credit.text = "Char Premium"
         } else {
