@@ -75,9 +75,11 @@ class TankTableViewController: UITableViewController {
         
     }
     
-    func backView() {
-        //self.navigationController?.popViewController(ViewController, animated:true);
-    }
+//    func backView() {
+//        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier:"ViewController") as! ViewController
+//        self.navigationController?.pushViewController(secondViewController, animated: true)
+//        //self.navigationController?.popToViewController(self.navigationController!.viewControllers as! ViewController, animated: true)
+//    }
     
     func searchTanks () {
         let userSettings = UserDefaults.standard

@@ -31,11 +31,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let button = UIButton.init(type: .custom)
-//        button.setImage(UIImage.init(named: "icon_button_back2.png"), for: UIControlState.normal)
-//        button.frame = CGRect.init(x: 0, y: 0, width: 35, height: 35) //CGRectMake(0, 0, 30, 30)
-//        let barButton = UIBarButtonItem.init(customView: button)
-//        self.navigationItem.leftBarButtonItem = barButton
+        //        let button = UIButton.init(type: .custom)
+        //        button.setImage(UIImage.init(named: "icon_button_back2.png"), for: UIControlState.normal)
+        //        button.addTarget(self, action: #selector(ViewController.backView), for: UIControlEvents.touchUpInside)
+        //        button.frame = CGRect.init(x: 0, y: 0, width: 35, height: 35) //CGRectMake(0, 0, 30, 30)
+        //        let barButton = UIBarButtonItem.init(customView: button)
+        //        self.navigationItem.leftBarButtonItem = barButton
         
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 20.0))
         view.backgroundColor = .orange
@@ -64,6 +65,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    //    func backView() {  
+    //        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier:"TankTableViewController") as! TankTableViewController
+    //        self.navigationController?.pushViewController(secondViewController, animated: true)
+    //        //self.navigationController?.popToViewController(self.navigationController!.viewControllers as! ViewController, animated: true)
+    //    }
     
     func reachabilityChanged(note: NSNotification) {
         
@@ -135,7 +142,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     }
                     if let accountId = json["data"][0]["account_id"].int {
                         _accountId = accountId
-                        self.ui_labelAlert.text = String(_accountId)
                         
                     } else {
                         _accountId = 0
@@ -168,24 +174,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
-     
-//    var backgroundMusicPlayer = AVAudioPlayer()
-//    
-//    func playBackgroundMusic(filename: String) {
-//        let url = Bundle.main.url(forResource: filename, withExtension: nil)
-//        guard let newURL = url else {
-//            print("Could not find file: \(filename)")
-//            return
-//        }
-//        do {
-//            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
-//            backgroundMusicPlayer.numberOfLoops = -1
-//            backgroundMusicPlayer.prepareToPlay()
-//            backgroundMusicPlayer.play()
-//        } catch let error as NSError {
-//            print(error.description)
-//        }
-//    }
+    
+    //    var backgroundMusicPlayer = AVAudioPlayer()
+    //
+    //    func playBackgroundMusic(filename: String) {
+    //        let url = Bundle.main.url(forResource: filename, withExtension: nil)
+    //        guard let newURL = url else {
+    //            print("Could not find file: \(filename)")
+    //            return
+    //        }
+    //        do {
+    //            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
+    //            backgroundMusicPlayer.numberOfLoops = -1
+    //            backgroundMusicPlayer.prepareToPlay()
+    //            backgroundMusicPlayer.play()
+    //        } catch let error as NSError {
+    //            print(error.description)
+    //        }
+    //    }
     var playFireSound = AVAudioPlayer()
     
     func playFireSound(filename: String) {

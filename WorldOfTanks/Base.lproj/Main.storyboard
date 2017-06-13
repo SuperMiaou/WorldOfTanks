@@ -179,11 +179,9 @@
                             <outlet property="delegate" destination="SbW-gu-6of" id="WfY-IO-6s9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="I98-cI-0Ya">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="0pW-uW-NMa">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <barButtonItem key="leftBarButtonItem" title="back" id="zcg-bd-1Ip">
+                    <navigationItem key="navigationItem" title="Liste des tanks du joueur" id="I98-cI-0Ya">
+                        <barButtonItem key="backBarButtonItem" title=" " id="XAi-rL-Nna"/>
+                        <barButtonItem key="leftBarButtonItem" image="icon_button_back.png" id="zcg-bd-1Ip">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="NeF-pM-py8"/>
@@ -242,16 +240,22 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LbG-8I-ezG">
-                                <rect key="frame" x="16" y="268" width="160" height="54"/>
+                                <rect key="frame" x="16" y="268" width="160" height="71.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type tank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRr-v3-u96">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="type tank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRr-v3-u96">
                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tier tank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpo-NU-OGN">
-                                        <rect key="frame" x="0.0" y="33.5" width="63" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="63" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="price_credit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjL-TZ-Op5">
+                                        <rect key="frame" x="0.0" y="51" width="89.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -262,7 +266,7 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="BEl-u0-egC">
-                                <rect key="frame" x="16" y="374" width="343" height="224"/>
+                                <rect key="frame" x="16" y="366" width="343" height="232"/>
                                 <color key="backgroundColor" red="0.25756026329999998" green="0.25756026329999998" blue="0.25756026329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -301,6 +305,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.25756026329999998" green="0.25756026329999998" blue="0.25756026329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BEl-u0-egC" firstAttribute="top" secondItem="M5J-0z-XMC" secondAttribute="bottom" constant="44" id="06t-Z8-SUD"/>
                             <constraint firstItem="LbG-8I-ezG" firstAttribute="top" secondItem="EuL-qi-WA7" secondAttribute="bottom" constant="8" id="0XD-am-sLM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BEl-u0-egC" secondAttribute="trailing" id="3nX-WV-Gbo"/>
                             <constraint firstItem="M5J-0z-XMC" firstAttribute="top" secondItem="EuL-qi-WA7" secondAttribute="bottom" constant="8" id="47c-4b-88b"/>
@@ -313,12 +318,11 @@
                             <constraint firstItem="M5J-0z-XMC" firstAttribute="leading" secondItem="LbG-8I-ezG" secondAttribute="trailing" constant="15" id="T9d-8r-LNp"/>
                             <constraint firstItem="5ae-D9-fXU" firstAttribute="top" secondItem="3Xj-Kf-V6o" secondAttribute="bottom" constant="8" id="Tg1-Jq-KWo"/>
                             <constraint firstAttribute="leadingMargin" secondItem="BEl-u0-egC" secondAttribute="leading" id="Xmm-J4-6pI"/>
-                            <constraint firstItem="BEl-u0-egC" firstAttribute="top" secondItem="LbG-8I-ezG" secondAttribute="bottom" constant="52" id="Zip-yU-bXr"/>
                             <constraint firstItem="5ae-D9-fXU" firstAttribute="top" secondItem="hwv-Pq-SEq" secondAttribute="bottom" constant="-30" id="ZpG-PK-6hh"/>
                             <constraint firstItem="5ae-D9-fXU" firstAttribute="top" secondItem="mMP-Hr-Rbo" secondAttribute="bottom" constant="-40" id="dqx-uF-M9o"/>
                             <constraint firstItem="5ae-D9-fXU" firstAttribute="leading" secondItem="mMP-Hr-Rbo" secondAttribute="trailing" constant="-40" id="mJ8-Xq-d4q"/>
-                            <constraint firstItem="BEl-u0-egC" firstAttribute="top" secondItem="M5J-0z-XMC" secondAttribute="bottom" constant="52" id="tlH-AI-XFm"/>
                             <constraint firstItem="svY-vo-pk4" firstAttribute="top" secondItem="BEl-u0-egC" secondAttribute="bottom" constant="69" id="usP-fZ-Itc"/>
+                            <constraint firstItem="BEl-u0-egC" firstAttribute="top" secondItem="LbG-8I-ezG" secondAttribute="bottom" constant="26.5" id="xcn-cm-wRX"/>
                             <constraint firstAttribute="leadingMargin" secondItem="EuL-qi-WA7" secondAttribute="leading" id="yxS-YP-3Hp"/>
                         </constraints>
                     </view>
@@ -331,21 +335,23 @@
                         <outlet property="ui_labelPourcentage" destination="RmC-gg-6AQ" id="dY3-gK-jyi"/>
                         <outlet property="ui_labelTierTank" destination="Jpo-NU-OGN" id="04c-JY-T2g"/>
                         <outlet property="ui_labelTypeTank" destination="FRr-v3-u96" id="PZ8-VM-2e4"/>
+                        <outlet property="ui_label_price_credit" destination="EjL-TZ-Op5" id="2M0-3b-Jch"/>
                         <outlet property="ui_textViewDescription" destination="BEl-u0-egC" id="ssc-sM-hKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9D-mX-Wav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702" y="25"/>
+            <point key="canvasLocation" x="1717.5999999999999" y="17.541229385307346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5mu-dp-0ZL">
             <objects>
                 <navigationController storyboardIdentifier="TankVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mbi-0r-ska" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x87-Uu-EC0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x87-Uu-EC0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -361,6 +367,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_button_back.png" width="30" height="30"/>
         <image name="logo" width="371" height="512"/>
         <image name="wall3" width="288" height="512"/>
     </resources>

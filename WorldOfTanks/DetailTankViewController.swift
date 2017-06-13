@@ -21,6 +21,7 @@ class DetailTankViewController: UIViewController {
     @IBOutlet weak var ui_imageViewTypeTank: UIImageView!
     @IBOutlet weak var ui_labelPourcentage: UILabel!
     @IBOutlet weak var ui_labelNbBataille: UILabel!
+    @IBOutlet weak var ui_label_price_credit: UILabel!
     
     
     var _currentVehicle:Vehicles?
@@ -28,10 +29,18 @@ class DetailTankViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Détail du char"
         ui_labelNameTank.text = _currentVehicle!.name
         ui_imageViewTank?.af_setImage(withURL: URL(string: _currentVehicle!.image)!)
         ui_labelTierTank.text = String(_currentVehicle!.tier)
         ui_textViewDescription.text = _currentVehicle!.description
+        
+        if (_currentVehicle?.price_credit == 0 && _currentVehicle?.tier != 1) {
+            ui_label_price_credit.textColor = UIColor.orange
+            ui_label_price_credit.text = "Char Premium"
+        } else {
+            ui_label_price_credit.text = String(_currentVehicle!.price_credit)
+        }
         
         if let nbBtaille = _currentVehicle?.battles {
             ui_labelNbBataille.text = "Bataille(s) : \(nbBtaille)"
