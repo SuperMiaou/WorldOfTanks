@@ -195,6 +195,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="cMc-rZ-y7H" id="KKT-tM-6Ql"/>
+                        <outlet property="ui_stopplaySound" destination="h84-Ba-jtf" id="3Am-qV-lTG"/>
                         <outlet property="ui_tableView" destination="XaA-OQ-qKS" id="MAI-NG-HKm"/>
                     </connections>
                 </tableViewController>

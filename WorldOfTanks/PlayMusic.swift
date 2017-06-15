@@ -11,22 +11,40 @@ import AVFoundation
 import UIKit
 
 class PlayMusic {
-    
-    var backgroundMusicPlayer = AVAudioPlayer()
-    
-    func playBackgroundMusic(filename: String) {
-        let url = Bundle.main.url(forResource: filename, withExtension: nil)
-        guard let newURL = url else {
-            print("Could not find file: \(filename)")
-            return
+    static var s_player:PlayMusic?
+    static func Get() -> PlayMusic {
+        if s_player == nil {
+            s_player = PlayMusic()
         }
-        do {
-            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
-            backgroundMusicPlayer.numberOfLoops = -1
-            backgroundMusicPlayer.prepareToPlay()
-            backgroundMusicPlayer.play()
-        } catch let error as NSError {
-            print(error.description)
+        
+        return s_player!
+    }
+    
+    private init() {
+        if let url = Bundle.main.url(forResource: "musicIntro", withExtension: "mp3") {
+            _player = try? AVAudioPlayer(contentsOf: url)
+        }
+    }
+    
+    private var _player : AVAudioPlayer?
+    
+    func playSound() {
+        if let player = _player {
+            player.prepareToPlay()
+            player.play()
+        }
+        
+    }
+    
+    func pauseSound() {
+        if let player = _player {
+            player.pause()
+        }
+    }
+    
+    func stopSound() {
+        if let player = _player {
+            player.stop()
         }
     }
     

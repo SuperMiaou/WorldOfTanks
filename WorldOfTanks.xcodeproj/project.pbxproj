@@ -12,10 +12,11 @@
 		B30CB7441EDDACCD007735F6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7431EDDACCD007735F6 /* Player.swift */; };
 		B30CB7461EDDAD2F007735F6 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7451EDDAD2F007735F6 /* Vehicles.swift */; };
 		B30CB7481EDDB44D007735F6 /* TankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */; };
+		B31C30D21EF28511000FD983 /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C30D11EF28511000FD983 /* Crew.swift */; };
+		B31C30D41EF2C0B4000FD983 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C30D31EF2C0B4000FD983 /* ViewController.swift */; };
 		B32AB8B31EEE893200F7CC47 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AB8B21EEE893200F7CC47 /* Reachability.swift */; };
 		B32AB8C31EEEDA0D00F7CC47 /* icon_button_back2.png in Resources */ = {isa = PBXBuildFile; fileRef = B32AB8C21EEEDA0D00F7CC47 /* icon_button_back2.png */; };
 		B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C31EDD5FC900F988BA /* AppDelegate.swift */; };
-		B32D74C61EDD5FCA00F988BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D74C51EDD5FCA00F988BA /* ViewController.swift */; };
 		B32D74C91EDD5FCA00F988BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74C71EDD5FCA00F988BA /* Main.storyboard */; };
 		B32D74CB1EDD5FCA00F988BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32D74CA1EDD5FCA00F988BA /* Assets.xcassets */; };
 		B32D74CE1EDD5FCA00F988BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */; };
@@ -61,11 +62,12 @@
 		B30CB7431EDDACCD007735F6 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B30CB7451EDDAD2F007735F6 /* Vehicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		B30CB7471EDDB44D007735F6 /* TankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TankTableViewController.swift; sourceTree = "<group>"; };
+		B31C30D11EF28511000FD983 /* Crew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
+		B31C30D31EF2C0B4000FD983 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B32AB8B21EEE893200F7CC47 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B32AB8C21EEEDA0D00F7CC47 /* icon_button_back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_button_back2.png; sourceTree = "<group>"; };
 		B32D74C01EDD5FC900F988BA /* WorldOfTanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfTanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D74C31EDD5FC900F988BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B32D74C51EDD5FCA00F988BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B32D74C81EDD5FCA00F988BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B32D74CA1EDD5FCA00F988BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32D74CD1EDD5FCA00F988BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -183,7 +185,7 @@
 				B353408D1EE018A5007D33FC /* Model */,
 				B35340881EE014A2007D33FC /* ModelManager */,
 				B32D74C31EDD5FC900F988BA /* AppDelegate.swift */,
-				B32D74C51EDD5FCA00F988BA /* ViewController.swift */,
+				B31C30D31EF2C0B4000FD983 /* ViewController.swift */,
 				B32D74CA1EDD5FCA00F988BA /* Assets.xcassets */,
 				B32D74C71EDD5FCA00F988BA /* Main.storyboard */,
 				B32D74CC1EDD5FCA00F988BA /* LaunchScreen.storyboard */,
@@ -228,6 +230,7 @@
 				B30CB7451EDDAD2F007735F6 /* Vehicles.swift */,
 				B30CB7431EDDACCD007735F6 /* Player.swift */,
 				B3DF55001EE82B5E0056D6F8 /* TankStatistics.swift */,
+				B31C30D11EF28511000FD983 /* Crew.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -537,10 +540,11 @@
 			files = (
 				B30CB7461EDDAD2F007735F6 /* Vehicles.swift in Sources */,
 				B34EC5511EE1800000D30048 /* DetailTankViewController.swift in Sources */,
+				B31C30D21EF28511000FD983 /* Crew.swift in Sources */,
 				B353408A1EE014C3007D33FC /* DataManager.swift in Sources */,
 				B30CB7481EDDB44D007735F6 /* TankTableViewController.swift in Sources */,
-				B32D74C61EDD5FCA00F988BA /* ViewController.swift in Sources */,
 				B30CB7441EDDACCD007735F6 /* Player.swift in Sources */,
+				B31C30D41EF2C0B4000FD983 /* ViewController.swift in Sources */,
 				B32D74C41EDD5FC900F988BA /* AppDelegate.swift in Sources */,
 				B3DF55011EE82B5E0056D6F8 /* TankStatistics.swift in Sources */,
 				B32AB8B31EEE893200F7CC47 /* Reachability.swift in Sources */,

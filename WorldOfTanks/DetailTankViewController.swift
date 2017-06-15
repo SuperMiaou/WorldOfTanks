@@ -106,6 +106,13 @@ class DetailTankViewController: UIViewController {
         } else if (_currentVehicle!.nation == "china") {
             ui_imageViewNationTank.image = #imageLiteral(resourceName: "chine")
         }
+        
+        if let crew = _currentVehicle?.crew {
+            for i in 0..<crew.count {
+                print("nombre", crew[i])
+            }
+        }
+        
         // Do any additional setup after loading the view.
         
     }

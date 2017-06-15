@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let ACCOUNT_ID_KEY = "ACCOUNT_ID"
     
     var playFireSound = AVAudioPlayer()
+    var player = AVAudioPlayer()
 
     
     override func viewDidLoad() {
@@ -68,8 +69,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             // Do any additional setup after loading the view, typically from a nib.
         }
         
-        //let playmusic = PlayMusic()
-        playBackgroundMusic(filename: "musicIntro.mp3")
+        PlayMusic.Get().playSound()
         
     }
     
@@ -192,24 +192,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             playFireSound.numberOfLoops = 0
             playFireSound.prepareToPlay()
             playFireSound.play()
-        } catch let error as NSError {
-            print(error.description)
-        }
-    }
-    
-    var backgroundMusicPlayer = AVAudioPlayer()
-    
-    func playBackgroundMusic(filename: String) {
-        let url = Bundle.main.url(forResource: filename, withExtension: nil)
-        guard let newURL = url else {
-            print("Could not find file: \(filename)")
-            return
-        }
-        do {
-            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
-            backgroundMusicPlayer.numberOfLoops = -1
-            backgroundMusicPlayer.prepareToPlay()
-            backgroundMusicPlayer.play()
         } catch let error as NSError {
             print(error.description)
         }

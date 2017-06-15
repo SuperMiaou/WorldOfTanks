@@ -39,6 +39,7 @@ class TankTableViewController: UITableViewController {
     let searchController = UISearchController(searchResultsController: nil)
     var filteredTanks:[Vehicles] = []
     
+    @IBOutlet weak var ui_stopplaySound: UIBarButtonItem!
     
     var _nameTank: String = ""
     var _imageTank: String = ""
@@ -196,8 +197,7 @@ class TankTableViewController: UITableViewController {
     }
     
     @IBAction func stopMusic(_ sender: Any) {
-        //let playmusic = ViewController()
-        //playmusic.backgroundMusicPlayer.play()
+        PlayMusic.Get().pauseSound()
     }
 }
 

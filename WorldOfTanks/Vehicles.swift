@@ -22,6 +22,7 @@ class Vehicles : Mappable {
     private var _wins: Int
     private var _price_credit: Int
     private var _tag: String
+    private var _crew: [Any]
     
     required init?(map: Map) {
         _name = ""
@@ -34,6 +35,7 @@ class Vehicles : Mappable {
         _wins = 0
         _price_credit = 0
         _tag = ""
+        _crew = [""]
     }
     
     func mapping(map: Map) {
@@ -47,6 +49,7 @@ class Vehicles : Mappable {
         _wins <- map ["statistics.wins"]
         _price_credit <- map ["price_credit"]
         _tag <- map ["tag"]
+        _crew <- map ["crew"]
     }
     
     
@@ -130,7 +133,15 @@ class Vehicles : Mappable {
         }
     }
     
-    init(name: String, description: String, type: String, tier: Int, image: String, nation: String, battles: Int, wins: Int, price_credit: Int, tag: String) {
+    var crew : [Any] {
+        get {
+            return _crew
+        }set {
+            _crew = newValue
+        }
+    }
+    
+    init(name: String, description: String, type: String, tier: Int, image: String, nation: String, battles: Int, wins: Int, price_credit: Int, tag: String, crew: [Any]) {
         _name = name
         _description = description
         _type = type
@@ -141,5 +152,6 @@ class Vehicles : Mappable {
         _wins = wins
         _price_credit = price_credit
         _tag = tag
+        _crew = crew
     }
 }

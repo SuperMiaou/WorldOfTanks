@@ -64,10 +64,12 @@ class DataManager {
             let tankJsonList = jsonData["data"]["\(account_id)"]
             print (tankJsonList)
             var interval:TimeInterval = 0
+            
             for (_, tankData):(String, JSON) in tankJsonList {
                 if let tankId = tankData["tank_id"].int,
                     let tankWins = tankData["statistics"]["wins"].int,
                     let tankBattles = tankData["statistics"]["battles"].int
+                
                 {
                     interval += 0.1
                     Timer.scheduledTimer(withTimeInterval: interval, repeats: false, block: { _ in
